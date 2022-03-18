@@ -1,0 +1,36 @@
+.header_logo {
+    margin-bottom: 1rem;
+}
+
+.header_welcomeMessage {
+    background-color: goldenrod;
+    padding: 1rem 0rem 1rem 1rem;
+    margin-bottom: 1rem;
+}
+
+.header_startingPointMessage{
+    max-width: 20%;
+    margin-bottom: 1rem;
+}
+.header_startingPoint {
+    margin-left: 40%;
+    margin-bottom: 1rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* <div class="header_logo">Grand canyon Travel Planners</div>
+        <div class="header_welcomeMessage">Welcome So-and-So</div>
+        <div class="header_startingPointMessage">
+            Your Starting Point 
+            <div class="header_startingPoint">Nashville,TN</div>
+        </div> */

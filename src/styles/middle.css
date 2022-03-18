@@ -1,0 +1,44 @@
+.middle_card {
+    background-color: lightgreen;
+}
+
+.middle_threeCardArea {
+    border: 2px black solid;
+    display:flex;
+    width:100%;
+    justify-content: space-between;
+}
+
+.middle_card {
+    padding: 0 3rem;
+    min-height: 500px;
+    min-width: 400px;
+}
+
+.weather_title {
+    background-color: gray;
+    display: flex;
+    align-items: flex-end;
+    margin-bottom: 2rem;
+}
+
+.weather_title h4{
+    margin-right: 5rem;;
+}
+.weather_card_area {
+    display:flex;
+    justify-content: space-between;
+
+}
+.weather_card {
+    background-color: gray;
+    min-height: 100px;
+    min-width: 100px;
+}
+
+.middle_save {
+    background-color: blue;
+    position:fixed;
+    bottom:0;
+    right: 50%;
+}
