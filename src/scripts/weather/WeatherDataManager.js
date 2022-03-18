@@ -1,7 +1,7 @@
-import settings from "settings.js";
+import { settings } from "../Settings.js";
 
-lat = 0;
-lon = 0;
+let lat = 0;
+let lon = 0;
 
 export const getGeocode = (city, state, countryCode) => {
   return fetch(
@@ -10,14 +10,16 @@ export const getGeocode = (city, state, countryCode) => {
     .then((response) => response.json())
     .then((json) => {
       // do something
-      console.log(json);
+      lon = json[0].lon;
+      lat = json[0].lat;
       return json;
     });
 };
 
-export const getWeatherReport = (lat, lon) => {
+//
+export const getWeatherReport = (latitude, longitude) => {
   return fetch(
-    `api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=${settings.weatherKey}`
+    `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${settings.weatherKey}`
   )
     .then((response) => response.json())
     .then((json) => {
