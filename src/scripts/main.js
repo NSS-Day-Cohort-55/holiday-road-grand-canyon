@@ -32,17 +32,16 @@ getBizarre().then(allBizarre => {
   bizarreSelectionFormatter(allBizarre)
 })
 
-
-ParkDataManager.getParks('TN');
-
 //for all the event listeners
 const applicationElement = document.querySelector(".holiday");
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "state") {
-    ParkDataManager.choosePark(event);
+    ParkDataManager.chooseState(event);
   }
-});
+  else if (event.target.id === "parkDropdown") {
+    ParkDataManager.choosePark(event);
+  }});
 
 
 applicationElement.addEventListener("change", (event) => {
@@ -66,3 +65,4 @@ applicationElement.addEventListener("change", (event) => {
     });
   }
 });
+document.querySelector('#park_detailsButton').addEventListener('click' , ParkDataManager.renderSinglePark);
