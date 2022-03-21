@@ -29,6 +29,7 @@ export const chooseState = (anEvent) => {
 };
 
 export const choosePark = (event) => {
+  document.querySelector("#parkCardDetails").innerHTML = '';
   parkCode = event.target.value;
 };
 
