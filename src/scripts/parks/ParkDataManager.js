@@ -18,7 +18,22 @@ const parkHTMLTemplate =
     <li>select an item</li>
     <li>select an item</li>
     <li>select an item</li>
-</ul>`;
+</ul>`
+
+export const parkSelectionFormatter = (statesArr) => {
+    let htmlPosition = document.querySelector("#card_stateSelect")
+    let stateHTMLelement = `<select name="state" id="state">
+    <option value="" selected="selected">Select a State</option>`;
+
+    for(const stateObj of statesArr){
+        stateHTMLelement += 
+        `<option value="${stateObj.abbreviation}">${stateObj.name}</option>`
+    }
+    stateHTMLelement += ` </select>`
+    htmlPosition.innerHTML = `${stateHTMLelement}`  
+   
+}
+;
 
 export const choosePark = (anEvent) => {
     const parkList = getParks(anEvent.target.value)
@@ -26,10 +41,13 @@ export const choosePark = (anEvent) => {
 }
 
 export const renderParkHTML = (parkList) => {
-    let thisHTML = `<ul>`;
+    let thisHTML = `<select name="parkDropdown" id="parkDropdown">
+                    <option value="" selected="selected">Select a Park</option>`;
     for (let park of parkList) {
-        thisHTML += `<li>${park.fullName}</li>`;
+        thisHTML += `<option value="${park.parkCode}">${park.fullName}</option>`;
     }
-    thisHTML += `</ul>`;
+    thisHTML += `</select>`;
+    console.log(parkList);
     document.querySelector('.card_userSelection').innerHTML = thisHTML;
 }
+
