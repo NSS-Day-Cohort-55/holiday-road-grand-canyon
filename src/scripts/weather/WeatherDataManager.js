@@ -9,7 +9,7 @@ export const getGeocode = (city, state) => {
   )
     .then((response) => response.json())
     .then((json) => {
-      // do something
+      // take latitude and longitude to be passed later to get weather report.
       lon = json[0].lon;
       lat = json[0].lat;
       return json;

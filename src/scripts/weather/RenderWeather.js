@@ -3,7 +3,7 @@ import { weatherReport } from "./WeatherCardHTML.js";
 
 const weatherArr = [];
 
-// temp code for getting weather report
+// get geocode using openweather api then pass that to get weather report to generate weather report data then take that data and turn it into an array of objs to be rendered on the dom
 export const renderWeather = (city, state) => {
   WeatherDataManager.getGeocode(city, state).then((parsedResponse) => {
     WeatherDataManager.getWeatherReport(
