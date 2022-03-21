@@ -45,13 +45,24 @@ applicationElement.addEventListener("change", (event) => {
 });
 
 
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "eatery") {
+    let eateryId = event.target.value.split("--");
+    console.log(eateryId[1]);
+    getEateries().then((allEateries) => {
+      let description = allEateries[eateryId[1] - 1].description;
+      document.getElementById("eatery_card_details").innerHTML = description;
+    });
+  }
+});
 
-// copy this to your settings.js and insert your specific keys
-// export const settings = {
-// 	graphhopperKey: "",
-// 	npsKey: "",
-// 	npsURL: "https://developer.nps.gov/api/v1/parks",
-// 	weatherKey: "",
-// 	bizarreryURL: "http://holidayroad.nss.team/bizarreries",
-// 	eateryURL: "http://holidayroad.nss.team/eateries"
-// };
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "bizarre") {
+    let bizId = event.target.value.split("--");
+    console.log(bizId[1]);
+    getBizarre().then((allBizarre) => {
+      let description = allBizarre[bizId[1] - 1].description;
+      document.getElementById("bizzare_deets").innerHTML = description;
+    });
+  }
+});
