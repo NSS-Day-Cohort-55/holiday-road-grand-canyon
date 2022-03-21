@@ -1,30 +1,20 @@
-import * as WeatherDataManager from "./weather/WeatherDataManager.js";
-import { getStates } from "./directions/DirectionDataManager.js"
-import { stateSelectionFormatter } from "./directions/states.js"
-import { getEateries } from "./eateries/EateryDataManager.js"
+import { renderWeather } from "./weather/RenderWeather.js";
+import { getStates } from "./directions/DirectionDataManager.js";
+import { stateSelectionFormatter } from "./directions/states.js";
+import { getEateries } from "./eateries/EateryDataManager.js";
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 
-// temp code for getting weather report
-WeatherDataManager.getGeocode("Nashville", "TN", "USA").then(
-  (parsedResponse) => {
-    WeatherDataManager.getWeatherReport(
-      parsedResponse[0].lat,
-      parsedResponse[0].lon
-    );
-  }
-);
+renderWeather("Nashville", "TN");
 
 //some code for getting all the states for the state drop down box
-getStates().then(allStates => {
-  stateSelectionFormatter(allStates)
-} )
+getStates().then((allStates) => {
+  stateSelectionFormatter(allStates);
+});
 
 //some code for getting all the eateries for the eatery drop down box
 
 getEateries();
-ParkDataManager.getParks('TN');
-
-
+ParkDataManager.getParks("TN");
 
 // copy this to your settings.js and insert your specific keys
 // export const settings = {
