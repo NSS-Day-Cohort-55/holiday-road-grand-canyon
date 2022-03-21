@@ -15,16 +15,15 @@
 // }
 
 
-export const eaterySelectionFormatter = (statesArr) => {
-    let htmlPosition = document.querySelector("#card_stateSelect")
-    let stateHTMLelement = `<select name="state" id="state">
-    <option value="" selected="selected">Select a State</option>`;
+export const eaterySelectionFormatter = (eateriesArr) => {
+    let eathtmlPosition = document.querySelector("#card_eaterySelect")
+    let eateryHTMLelement = `<select name="eatery" id="eatery">
+    <option value="" selected="selected">Select an Eatery</option>`;
 
-    for(const stateObj of statesArr){
-        stateHTMLelement += 
-        `<option value="${stateObj.abbreviation}">${stateObj.name}</option>`
+    for(const eateryObj of eateriesArr){
+        eateryHTMLelement += 
+        `<option value="eat--${eateryObj.id}">${eateryObj.businessName}</option>`
     }
-    stateHTMLelement += ` </select>`
-    htmlPosition.innerHTML = `${stateHTMLelement}`  
-   
+    eateryHTMLelement += ` </select>`
+    eathtmlPosition.innerHTML = `${eateryHTMLelement}`    
 }
