@@ -22,9 +22,14 @@ const parkHTMLTemplate =
 
 export const choosePark = (anEvent) => {
     const parkList = getParks(anEvent.target.value)
-    .then(parkList => {renderParkHTML(parkList)});
+    .then(parkList => {renderParkHTML(parkList.data)});
 }
 
 export const renderParkHTML = (parkList) => {
-    console.log(parkList);
+    let thisHTML = `<ul>`;
+    for (let park of parkList) {
+        thisHTML += `<li>${park.fullName}</li>`;
+    }
+    thisHTML += `</ul>`;
+    document.querySelector('.card_userSelection').innerHTML = thisHTML;
 }
