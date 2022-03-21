@@ -1,2 +1,6 @@
 @import "middle.css";
 @import "header.css";
+
+.holiday {
+    background-color:blanchedalmond;
+}
