@@ -35,15 +35,15 @@ getBizarre().then(allBizarre => {
 
 ParkDataManager.getParks('TN');
 
-
 //for all the event listeners
 const applicationElement = document.querySelector(".holiday");
 
-applicationElement.addEventListener("change", event => {
-	if (event.target.id === "state") {
-		console.log("you changed a state!")
-	}
-})
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "state") {
+    ParkDataManager.choosePark(event);
+  }
+});
+
 
 
 // copy this to your settings.js and insert your specific keys
