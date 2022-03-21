@@ -44,22 +44,26 @@ applicationElement.addEventListener("change", (event) => {
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "eatery") {
+    document.getElementById("eatery_card_details").style.visibility = "hidden";
     let eateryId = event.target.value.split("--");
     console.log(eateryId[1]);
     getEateries().then((allEateries) => {
       let description = allEateries[eateryId[1] - 1].description;
       document.getElementById("eatery_card_details").innerHTML = description;
+      document.getElementById("bizzare_deets").style.visibility = "hidden";
     });
   }
 });
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "bizarre") {
+    document.getElementById("bizzare_deets").style.visibility = "hidden";
     let bizId = event.target.value.split("--");
     console.log(bizId[1]);
     getBizarre().then((allBizarre) => {
       let description = allBizarre[bizId[1] - 1].description;
       document.getElementById("bizzare_deets").innerHTML = description;
+      document.getElementById("bizzare_deets").style.visibility = "hidden";
     });
   }
 });
