@@ -14,7 +14,6 @@ import * as ParkDataManager from "./parks/ParkDataManager.js";
 
 renderWeather("Nashville", "TN");
 
-
 //some code for getting all the states for the state drop down box
 getStates().then((allStates) => {
   stateSelectionFormatter(allStates);
@@ -22,18 +21,17 @@ getStates().then((allStates) => {
 
 //some code for getting all the eateries for the eatery drop down box
 
-getEateries().then(allEateries => {
-  eaterySelectionFormatter(allEateries)
-})
+getEateries().then((allEateries) => {
+  eaterySelectionFormatter(allEateries);
+});
 
 //some code for getting all the bizarreries into a dropdown menu
 
-getBizarre().then(allBizarre => {
-  bizarreSelectionFormatter(allBizarre)
-})
+getBizarre().then((allBizarre) => {
+  bizarreSelectionFormatter(allBizarre);
+});
 
-
-ParkDataManager.getParks('TN');
+ParkDataManager.getParks("TN");
 
 //for all the event listeners
 const applicationElement = document.querySelector(".holiday");
@@ -43,15 +41,3 @@ applicationElement.addEventListener("change", (event) => {
     ParkDataManager.choosePark(event);
   }
 });
-
-
-
-// copy this to your settings.js and insert your specific keys
-// export const settings = {
-// 	graphhopperKey: "",
-// 	npsKey: "",
-// 	npsURL: "https://developer.nps.gov/api/v1/parks",
-// 	weatherKey: "",
-// 	bizarreryURL: "http://holidayroad.nss.team/bizarreries",
-// 	eateryURL: "http://holidayroad.nss.team/eateries"
-// };
