@@ -42,27 +42,27 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
-applicationElement.addEventListener("change", (event) => {
-  if (event.target.id === "bizarre") {
-    let bizId = event.target.value.split("--");
-    console.log(bizId[1]);
-    getBizarre().then((allBizarre) => {
-      let description = allBizarre[bizId[1] - 1].description;
-      document.getElementById("bizzare_deets").innerHTML = description;
-    });
-  }
-});
+// applicationElement.addEventListener("change", (event) => {
+//   if (event.target.id === "bizarre") {
+//     let bizId = event.target.value.split("--");
+//     console.log(bizId[1]);
+//     getBizarre().then((allBizarre) => {
+//       let description = allBizarre[bizId[1] - 1].description;
+//       document.getElementById("bizzare_deets").innerHTML = description;
+//     });
+//   }
+// });
 
-applicationElement.addEventListener("click", (event) => {
-  if (event.target.id === "bizarre_button") {
-    let details = document.getElementById("bizzare_deets");
-    if (
-      details.style.visibility === "hidden" ||
-      details.style.visibility === ""
-    ) {
-      details.style.visibility = "visible";
-    } else {
-      details.style.visibility = "hidden";
-    }
-  }
-});
+// applicationElement.addEventListener("click", (event) => {
+//   if (event.target.id === "bizarre_button") {
+//     let details = document.getElementById("bizzare_deets");
+//     if (
+//       details.style.visibility === "hidden" ||
+//       details.style.visibility === ""
+//     ) {
+//       details.style.visibility = "visible";
+//     } else {
+//       details.style.visibility = "hidden";
+//     }
+//   }
+// });
