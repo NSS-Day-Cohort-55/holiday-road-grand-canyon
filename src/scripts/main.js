@@ -43,4 +43,26 @@ applicationElement.addEventListener("change", (event) => {
     ParkDataManager.choosePark(event);
   }});
 
+
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "eatery") {
+    let eateryId = event.target.value.split("--");
+    console.log(eateryId[1]);
+    getEateries().then((allEateries) => {
+      let description = allEateries[eateryId[1] - 1].description;
+      document.getElementById("eatery_card_details").innerHTML = description;
+    });
+  }
+});
+
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "bizarre") {
+    let bizId = event.target.value.split("--");
+    console.log(bizId[1]);
+    getBizarre().then((allBizarre) => {
+      let description = allBizarre[bizId[1] - 1].description;
+      document.getElementById("bizzare_deets").innerHTML = description;
+    });
+  }
+});
 document.querySelector('#park_detailsButton').addEventListener('click' , ParkDataManager.renderSinglePark);
