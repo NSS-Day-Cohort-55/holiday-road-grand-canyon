@@ -31,38 +31,77 @@ getBizarre().then((allBizarre) => {
   bizarreSelectionFormatter(allBizarre);
 });
 
-ParkDataManager.getParks("TN");
-
 //for all the event listeners
 const applicationElement = document.querySelector(".holiday");
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "state") {
+    ParkDataManager.chooseState(event);
+  } else if (event.target.id === "parkDropdown") {
     ParkDataManager.choosePark(event);
   }
 });
 
-// applicationElement.addEventListener("change", (event) => {
-//   if (event.target.id === "bizarre") {
-//     let bizId = event.target.value.split("--");
-//     console.log(bizId[1]);
-//     getBizarre().then((allBizarre) => {
-//       let description = allBizarre[bizId[1] - 1].description;
-//       document.getElementById("bizzare_deets").innerHTML = description;
-//     });
-//   }
-// });
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "eatery") {
+    let eateryId = event.target.value.split("--");
+    console.log(eateryId[1]);
+    getEateries().then((allEateries) => {
+      let description = allEateries[eateryId[1] - 1].description;
+      document.getElementById("eatery_card_details").innerHTML = description;
+    });
+  }
+});
 
-// applicationElement.addEventListener("click", (event) => {
-//   if (event.target.id === "bizarre_button") {
-//     let details = document.getElementById("bizzare_deets");
-//     if (
-//       details.style.visibility === "hidden" ||
-//       details.style.visibility === ""
-//     ) {
-//       details.style.visibility = "visible";
-//     } else {
-//       details.style.visibility = "hidden";
-//     }
-//   }
-// });
+applicationElement.addEventListener("change", (event) => {
+  if (event.target.id === "bizarre") {
+    let bizId = event.target.value.split("--");
+    console.log(bizId[1]);
+    getBizarre().then((allBizarre) => {
+      let description = allBizarre[bizId[1] - 1].description;
+      document.getElementById("bizzare_deets").innerHTML = description;
+    });
+  }
+});
+
+applicationElement.addEventListener("click", (event) => {
+  if (event.target.id === "bizarre_button") {
+    let details = document.getElementById("bizzare_deets");
+    if (
+      details.style.visibility === "hidden" ||
+      details.style.visibility === ""
+    ) {
+      details.style.visibility = "visible";
+    } else {
+      details.style.visibility = "hidden";
+    }
+  }
+
+  if (event.target.id === "eatDetailButton") {
+    let details = document.getElementById("eatery_card_details");
+    if (
+      details.style.visibility === "hidden" ||
+      details.style.visibility === ""
+    ) {
+      details.style.visibility = "visible";
+    } else {
+      details.style.visibility = "hidden";
+    }
+  }
+
+  if (event.target.id === "park_detailsButton") {
+    let details = document.getElementById("parkCardDetails");
+    if (
+      details.style.visibility === "hidden" ||
+      details.style.visibility === ""
+    ) {
+      details.style.visibility = "visible";
+    } else {
+      details.style.visibility = "hidden";
+    }
+  }
+});
+
+document
+  .querySelector("#park_detailsButton")
+  .addEventListener("click", ParkDataManager.renderSinglePark);
