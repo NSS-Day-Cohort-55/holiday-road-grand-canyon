@@ -5,11 +5,26 @@ const key=settings.npsKey;
 
 export const getParks = (stateCode) => {
     const fullURL = `${parksURL}?API_KEY=${key}&stateCode=${stateCode}`;
-    console.log(fullURL);
     return fetch(fullURL)
     .then((response) => response.json())
     .then((fortnite) => {
-        console.log(fortnite)
         return fortnite;
     });
+}
+
+const parkHTMLTemplate = 
+`<ul>
+    <li>select an item</li>
+    <li>select an item</li>
+    <li>select an item</li>
+    <li>select an item</li>
+</ul>`;
+
+export const choosePark = (anEvent) => {
+    const parkList = getParks(anEvent.target.value)
+    .then(parkList => {renderParkHTML(parkList)});
+}
+
+export const renderParkHTML = (parkList) => {
+    console.log(parkList);
 }
