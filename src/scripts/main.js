@@ -8,23 +8,17 @@ import { eaterySelectionFormatter } from "./eateries/eateries.js";
 import { getBizarre } from "./attractions/AttractionDataManager.js";
 import { bizarreSelectionFormatter } from "./attractions/attractions.js";
 
+import { renderWeather } from "./weather/RenderWeather.js";
+
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 
-// temp code for getting weather report
-WeatherDataManager.getGeocode("Nashville", "TN", "USA").then(
-  (parsedResponse) => {
-    WeatherDataManager.getWeatherReport(
-      parsedResponse[0].lat,
-      parsedResponse[0].lon
-    );
-  }
-);
+renderWeather("Nashville", "TN");
 
 
 //some code for getting all the states for the state drop down box
-getStates().then(allStates => {
-  stateSelectionFormatter(allStates)
-} )
+getStates().then((allStates) => {
+  stateSelectionFormatter(allStates);
+});
 
 //some code for getting all the eateries for the eatery drop down box
 
@@ -49,9 +43,7 @@ applicationElement.addEventListener("change", event => {
 	if (event.target.id === "state") {
 		console.log("you changed a state!")
 	}
-  })
-
-
+})
 
 
 // copy this to your settings.js and insert your specific keys
