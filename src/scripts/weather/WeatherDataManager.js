@@ -3,13 +3,13 @@ import { settings } from "../Settings.js";
 let lat = 0;
 let lon = 0;
 
-export const getGeocode = (city, state, countryCode) => {
+export const getGeocode = (city, state) => {
   return fetch(
-    `http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},${countryCode}&limit=1&appid=${settings.weatherKey}`
+    `http://api.openweathermap.org/geo/1.0/direct?q=${city},${state},USA&limit=1&appid=${settings.weatherKey}`
   )
     .then((response) => response.json())
     .then((json) => {
-      // do something
+      // take latitude and longitude to be passed later to get weather report.
       lon = json[0].lon;
       lat = json[0].lat;
       return json;
@@ -19,12 +19,10 @@ export const getGeocode = (city, state, countryCode) => {
 //
 export const getWeatherReport = (latitude, longitude) => {
   return fetch(
-    `http://api.openweathermap.org/data/2.5/forecast?lat=${latitude}&lon=${longitude}&appid=${settings.weatherKey}`
+    `https://api.openweathermap.org/data/2.5/onecall?lat=${latitude}&lon=${longitude}&exclude=current,minutely,hourly,alerts&appid=${settings.weatherKey}&units=imperial`
   )
     .then((response) => response.json())
     .then((json) => {
-      // do something
-      console.log(json);
       return json;
     });
 };

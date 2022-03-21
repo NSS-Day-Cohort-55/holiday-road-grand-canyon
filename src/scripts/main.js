@@ -1,18 +1,19 @@
 import * as WeatherDataManager from "./weather/WeatherDataManager.js";
 import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
+
 import { getEateries } from "./eateries/EateryDataManager.js";
+import { eaterySelectionFormatter } from "./eateries/eateries.js";
+
+import { getBizarre } from "./attractions/AttractionDataManager.js";
+import { bizarreSelectionFormatter } from "./attractions/attractions.js";
+
+import { renderWeather } from "./weather/RenderWeather.js";
+
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 
-// temp code for getting weather report
-WeatherDataManager.getGeocode("Nashville", "TN", "USA").then(
-  (parsedResponse) => {
-    WeatherDataManager.getWeatherReport(
-      parsedResponse[0].lat,
-      parsedResponse[0].lon
-    );
-  }
-);
+renderWeather("Nashville", "TN");
+
 
 //some code for getting all the states for the state drop down box
 getStates().then((allStates) => {
@@ -21,8 +22,18 @@ getStates().then((allStates) => {
 
 //some code for getting all the eateries for the eatery drop down box
 
-getEateries();
-ParkDataManager.getParks("TN");
+getEateries().then(allEateries => {
+  eaterySelectionFormatter(allEateries)
+})
+
+//some code for getting all the bizarreries into a dropdown menu
+
+getBizarre().then(allBizarre => {
+  bizarreSelectionFormatter(allBizarre)
+})
+
+
+ParkDataManager.getParks('TN');
 
 //for all the event listeners
 const applicationElement = document.querySelector(".holiday");
@@ -33,10 +44,7 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
-// const parkButton = document.querySelector('.card_detailsButton');
-// const parkDropdown = document.querySelector('#state');
-// parkButton.addEventListener('click' , ParkDataManager.renderParkHTML);
-// parkDropdown.addEventListener('change' , ParkDataManager.renderParkHTML2);
+
 
 // copy this to your settings.js and insert your specific keys
 // export const settings = {
