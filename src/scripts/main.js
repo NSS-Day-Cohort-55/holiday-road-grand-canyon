@@ -138,7 +138,7 @@ applicationElement.addEventListener("click", (event) => {
     );
   }
 });
-
+//
 const saveTrips = document.querySelector("#saveTrip");
 saveTrips.disabled = true;
 applicationElement.addEventListener("change", (event) => {
