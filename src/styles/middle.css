@@ -3,7 +3,6 @@
 }
 
 .middle_threeCardArea {
-    border: 2px black solid;
     display:flex;
     width:100%;
     justify-content: space-between;
@@ -11,8 +10,11 @@
 
 .middle_card {
     padding: 0 3rem;
+    /* min-height: 500px;
+    min-width: 400px; */
+    min-width:20%;
     min-height: 500px;
-    min-width: 400px;
+    max-width:25%;
 }
 
 .weather_title {
