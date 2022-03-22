@@ -106,9 +106,6 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-document
-  .querySelector("#park_detailsButton")
-  .addEventListener("click", ParkDataManager.renderSinglePark);
-
-
-  // renderWeather("Nashville", "TN");
+// document
+//   .querySelector("#park_detailsButton")
+//   .addEventListener("click", ParkDataManager.renderSinglePark);

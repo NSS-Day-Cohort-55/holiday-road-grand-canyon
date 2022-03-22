@@ -1,4 +1,5 @@
 import { settings } from "../Settings.js";
+import * as RenderWeather from "../weather/RenderWeather.js";
 
 const parksURL = "https://developer.nps.gov/api/v1/parks";
 const key = settings.npsKey;
@@ -18,6 +19,7 @@ export const getParkByCode = (code) => {
   return fetch(fullURL)
     .then((response) => response.json())
     .then((fortnite) => {
+      console.log(fortnite);
       return fortnite;
     });
 };
@@ -29,9 +31,19 @@ export const chooseState = (anEvent) => {
 };
 
 export const choosePark = (event) => {
+  parkCode = event.target.value;
+  const thisPark = getParkByCode(parkCode).then((thisPark) => {
+    let thisHTML = `${thisPark.data[0].description}`;
+    document.querySelector("#parkCardDetails").innerHTML = thisHTML;
+    RenderWeather.renderWeather(
+      thisPark.data[0].addresses[0].city,
+      thisPark.data[0].addresses[0].stateCode
+    );
+  });
   document.querySelector("#parkCardDetails").innerHTML = "";
   document.getElementById("parkCardDetails").style.visibility = "hidden";
-  parkCode = event.target.value;
+  // let weatherElement = document.querySelector(".weather_card_area");
+  // weatherElement.innerHTML = "";
 };
 
 export const renderParkHTML = (parkList) => {
@@ -44,9 +56,11 @@ export const renderParkHTML = (parkList) => {
   document.querySelector(".card_userSelection").innerHTML = thisHTML;
 };
 
-export const renderSinglePark = () => {
-  const thisPark = getParkByCode(parkCode).then((thisPark) => {
-    let thisHTML = `${thisPark.data[0].description}`;
-    document.querySelector("#parkCardDetails").innerHTML = thisHTML;
-  });
-};
+// export const renderSinglePark = () => {
+//   // const thisPark = getParkByCode(parkCode).then((thisPark) => {
+//   //   let thisHTML = `${thisPark.data[0].description}`;
+//   //   document.querySelector("#parkCardDetails").innerHTML = thisHTML;
+//   //   RenderWeather.renderWeather(thisPark.data[0].addresses[0].city , thisPark.data[0].addresses[0].stateCode);
+//   // });
+//   // document.getElementById("parkCardDetails").style.visibility = "hidden";
+// };
