@@ -1,3 +1,5 @@
+import { getEateries } from "./EateryDataManager.js"; 
+
 // {
 //     "businessName": "Marge's Pancake House",
 //     "description": "Marge has been making pancakes from her family recipe for 50 years. People love to eat at Marge's Pancake House because everyone who works there dresses as a famous actor every day for work.",
@@ -27,6 +29,42 @@ export const eaterySelectionFormatter = (eateriesArr) => {
     eateryHTMLelement += `</select>`
     eathtmlPosition.innerHTML = `${eateryHTMLelement}` 
        
+}
+
+export const renderEateryHTML = (event) => {
+    document.getElementById("eatery_card_details").style.visibility = "hidden";
+    let eateryId = event.target.value.split("--");
+    console.log(eateryId[1]);
+    getEateries().then((allEateries) => {
+      let description = '';
+      description += `<h4>${allEateries[eateryId[1] - 1].description}</h4>`;
+      description += checkEatAmeneties(allEateries[eateryId[1] - 1]);
+      document.getElementById("eatery_card_details").innerHTML = description;
+      document.getElementById("bizzare_deets").style.visibility = "hidden";
+    });
+}
+
+const checkEatAmeneties = (eatObj) => {
+    let HTMLString = '';
+    if (eatObj.ameneties.wheelchairAccessible === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/wheelchairIcon.png' alt='souvenirs' />`;
+    };
+    if (eatObj.ameneties.petFriendly === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/petIcon.png' alt='souvenirs' />`;
+    };
+    if (eatObj.ameneties.wifi === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/wifiIcon.webp' alt='souvenirs' />`;
+    };
+    if (eatObj.ameneties.diaperFacility === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/diaperIcon.webp' alt='souvenirs' />`;
+    };
+    if (eatObj.ameneties.playground === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/playgroundIcon.webp' alt='souvenirs' />`;
+    };
+    if (eatObj.ameneties.restrooms === true) {
+        HTMLString += `<img class ='amenityIcon' src='././images/restroomIcon.webp' alt='restrooms'/>`;
+    };
+    return HTMLString;
 }
 
 

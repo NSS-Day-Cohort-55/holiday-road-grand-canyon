@@ -33,7 +33,9 @@ export const chooseState = (anEvent) => {
 export const choosePark = (event) => {
   parkCode = event.target.value;
   const thisPark = getParkByCode(parkCode).then((thisPark) => {
-    let thisHTML = `${thisPark.data[0].description}`;
+    console.log(thisPark);
+    let thisHTML = '';
+    thisHTML += `<h4>${thisPark.data[0].description}</h4>`;
     document.querySelector("#parkCardDetails").innerHTML = thisHTML;
     RenderWeather.renderWeather(
       thisPark.data[0].addresses[0].city,
