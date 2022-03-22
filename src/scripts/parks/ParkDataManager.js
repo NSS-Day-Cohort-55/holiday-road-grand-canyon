@@ -19,7 +19,6 @@ export const getParkByCode = (code) => {
   return fetch(fullURL)
     .then((response) => response.json())
     .then((fortnite) => {
-      console.log(fortnite);
       return fortnite;
     });
 };
@@ -28,6 +27,10 @@ export const chooseState = (anEvent) => {
   const parkList = getParks(anEvent.target.value).then((parkList) => {
     renderParkHTML(parkList.data);
   });
+  document.querySelector("#parkCardDetails").innerHTML = "";
+  const weatherParent = document.getElementById("weather_card_area");
+  weatherParent.innerHTML = "";
+  document.querySelector(".weather_title").innerHTML = "";
 };
 
 export const choosePark = (event) => {
@@ -50,7 +53,7 @@ export const choosePark = (event) => {
 
 export const renderParkHTML = (parkList) => {
   let thisHTML = `<select name="parkDropdown" id="parkDropdown">
-                    <option value="" selected="selected">Select a Park</option>`;
+                    <option value="" selected="selected" disabled>Select a Park</option>`;
   for (let park of parkList) {
     thisHTML += `<option value="${park.parkCode}">${park.fullName}</option>`;
   }

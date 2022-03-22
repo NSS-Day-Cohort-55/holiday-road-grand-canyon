@@ -14,11 +14,10 @@ import { getBizarre } from "./AttractionDataManager.js";
 //     }
 // }
 
-
 export const bizarreSelectionFormatter = (bizArr) => {
-    let bizarrehtmlPosition = document.querySelector("#card_bizarreSelect")
-    let bizarreHTMLelement = `<select name="bizarre" id="bizarre">
-    <option value="" selected="selected">Select an Attraction</option>`;
+  let bizarrehtmlPosition = document.querySelector("#card_bizarreSelect");
+  let bizarreHTMLelement = `<select name="bizarre" id="bizarre">
+    <option value="" selected="selected" disabled>Select an Attraction</option>`;
 
     for(const bizObj of bizArr){
         bizarreHTMLelement += 

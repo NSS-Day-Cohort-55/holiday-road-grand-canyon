@@ -5,81 +5,79 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Holiday Road!</title>
     <link rel="stylesheet" href="./styles/main.css">
 </head>
 
-    <body class="holiday">
-        <header>
-            <div class="header_logo">Grand canyon Travel Planners</div>
-            <div class="header_welcomeMessage">Welcome So-and-So</div>
-            <div class="header_startingPointMessage">
-                Your Starting Point
-                <div class="header_startingPoint">Nashville,TN</div>
-            </div>
-        </header>
-        <div id="main_aside" class="main_aside">
-            <main id="main">
-                <!-- gonna try a fancy sidebar -->
-                <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button>
-                
-
-                <div class="middle_title">
-                    <h1>Plan Your Next Great Trip!</h1>
-                </div>
-                <div class="middle_threeCardArea">
-                    <div id="nationalParkCard" class="middle_card">
-                        <h3>National Parks</h3>
-                        <div id="card_stateSelect" class="card_selectBox"> Your State</div>
-                        <div class="card_selectionList">
-        
-                            <!-- nationalParks go here -->
-                        </div>
-                        <div class="card_userSelection">User Selection</div>
-                        <button id="park_detailsButton" class="park_detailsButton">See details</button>
-                        <div id="parkCardDetails" class="card_details"></div>
-                    </div>
-        
-                    <div id="eateryCard" class="middle_card">
-                        <h3>Eateries</h3>
-                        <div id="card_eaterySelect" class="card_selectBox"> Select an Eatery</div>
-        
-                        <div class="card_userSelection">User Selection</div>
-                        <button id="eatDetailButton" class="card_detailsButton">See details</button>
-                        <div id="eatery_card_details" class="card_details"></div>
-                    </div>
-        
-                    <div id="bizzareCard" class="middle_card">
-                        <h3>Bizzare Place</h3>
-                        <div id="card_bizarreSelect" class="card_selectBox"> Your Attraction</div>
-        
-                        <div class="card_userSelection">User Selection</div>
-                        <button id="bizarre_button" class="card_detailsButton">See details</button>
-                        <div id="bizzare_deets" class="card_details"></div>
-                    </div>
-                </div>
-                <div class="middle_weather">
-                    <div class="weather_title">
-                        <h4>Your Weather Forcast</h4>
-                        <div class="weather_date">01/22/22 - 01/27/22</div>
-                    </div>
-                    <div class=weather_card_area>
-                    </div>
-                </div>
-                <div class="middle_save">
-                    <button id="saveTrip">Save My Trip</button>
-                </div>
-            </main>
-            <aside id="savedTrips" class="savedTrips">
-                <!-- This is a button -->
-                
-                <!-- This is where the JS goes -->
-            </aside>
+<body class="holiday">
+    <header>
+        <div class="header_logo">Grand canyon Travel Planners</div>
+        <div class="header_welcomeMessage">Welcome So-and-So</div>
+        <div class="header_startingPointMessage">
+            Your Starting Point
+            <div class="header_startingPoint">Nashville,TN</div>
         </div>
-        <footer>
+    </header>
+    <div id="main_aside" class="main_aside">
+        <main id="main">
+            <!-- gonna try a fancy sidebar -->
+            <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button>
 
-        </footer>
-        <script type="module" src="./scripts/main.js"></script>
-    </body>
+
+            <div class="middle_title">
+                <h1>Plan Your Next Great Trip!</h1>
+            </div>
+            <div class="middle_threeCardArea">
+                <div id="nationalParkCard" class="middle_card">
+                    <h3>National Parks</h3>
+                    <div id="card_stateSelect" class="card_selectBox"> Your State</div>
+                    <div class="card_selectionList">
+
+                        <!-- nationalParks go here -->
+                    </div>
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="park_detailsButton" class="park_detailsButton">See details</button>
+                    <div id="parkCardDetails" class="card_details"></div>
+                </div>
+
+                <div id="eateryCard" class="middle_card">
+                    <h3>Eateries</h3>
+                    <div id="card_eaterySelect" class="card_selectBox"> Select an Eatery</div>
+
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="eatDetailButton" class="card_detailsButton">See details</button>
+                    <div id="eatery_card_details" class="card_details"></div>
+                </div>
+
+                <div id="bizzareCard" class="middle_card">
+                    <h3>Bizzare Place</h3>
+                    <div id="card_bizarreSelect" class="card_selectBox"> Your Attraction</div>
+
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="bizarre_button" class="card_detailsButton">See details</button>
+                    <div id="bizzare_deets" class="card_details"></div>
+                </div>
+            </div>
+            <div class="middle_weather">
+                <div class="weather_title">
+                </div>
+                <div class=weather_card_area id="weather_card_area">
+                </div>
+            </div>
+            <div class="middle_save">
+                <button id="saveTrip">Save My Trip</button>
+            </div>
+        </main>
+        <aside id="savedTrips" class="savedTrips">
+            <!-- This is a button -->
+
+            <!-- This is where the JS goes -->
+        </aside>
+    </div>
+    <footer>
+
+    </footer>
+    <script type="module" src="./scripts/main.js"></script>
+</body>
 
 </html>
