@@ -12,16 +12,14 @@
 //     }
 // }
 
-
 export const bizarreSelectionFormatter = (bizArr) => {
-    let bizarrehtmlPosition = document.querySelector("#card_bizarreSelect")
-    let bizarreHTMLelement = `<select name="bizarre" id="bizarre">
-    <option value="" selected="selected">Select an Attraction</option>`;
+  let bizarrehtmlPosition = document.querySelector("#card_bizarreSelect");
+  let bizarreHTMLelement = `<select name="bizarre" id="bizarre">
+    <option value="" selected="selected" disabled>Select an Attraction</option>`;
 
-    for(const bizObj of bizArr){
-        bizarreHTMLelement += 
-        `<option value="biz--${bizObj.id}">${bizObj.name}</option>`
-    }
-    bizarreHTMLelement += ` </select>`
-    bizarrehtmlPosition.innerHTML = `${bizarreHTMLelement}`    
-}
+  for (const bizObj of bizArr) {
+    bizarreHTMLelement += `<option value="biz--${bizObj.id}">${bizObj.name}</option>`;
+  }
+  bizarreHTMLelement += ` </select>`;
+  bizarrehtmlPosition.innerHTML = `${bizarreHTMLelement}`;
+};

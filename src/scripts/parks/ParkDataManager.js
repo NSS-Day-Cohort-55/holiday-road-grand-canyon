@@ -51,7 +51,7 @@ export const choosePark = (event) => {
 
 export const renderParkHTML = (parkList) => {
   let thisHTML = `<select name="parkDropdown" id="parkDropdown">
-                    <option value="" selected="selected">Select a Park</option>`;
+                    <option value="" selected="selected" disabled>Select a Park</option>`;
   for (let park of parkList) {
     thisHTML += `<option value="${park.parkCode}">${park.fullName}</option>`;
   }
