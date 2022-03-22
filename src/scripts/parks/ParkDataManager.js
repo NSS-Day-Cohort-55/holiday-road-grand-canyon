@@ -28,6 +28,9 @@ export const chooseState = (anEvent) => {
   const parkList = getParks(anEvent.target.value).then((parkList) => {
     renderParkHTML(parkList.data);
   });
+  document.querySelector("#parkCardDetails").innerHTML = "";
+  const weatherParent = document.getElementById("weather_card_area");
+  weatherParent.innerHTML = "";
 };
 
 export const choosePark = (event) => {
