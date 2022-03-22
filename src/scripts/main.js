@@ -1,21 +1,12 @@
-
 import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
-
 import { getEateries } from "./eateries/EateryDataManager.js";
 import { eaterySelectionFormatter } from "./eateries/eateries.js";
-
 import { getBizarre } from "./attractions/AttractionDataManager.js";
 import { bizarreSelectionFormatter } from "./attractions/attractions.js";
-
-import { renderWeather } from "./weather/RenderWeather.js";
-
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 import { asideSelectionFormatter } from "./aside/aside.js";
 import { getSavedTrips, saveTrip } from "./aside/asideDataManager.js";
- 
-
-renderWeather("Nashville", "TN");
 
 //some code for getting all the states for the state drop down box
 getStates().then((allStates) => {
@@ -50,7 +41,6 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
-
 //eatery
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "eatery") {
@@ -60,7 +50,8 @@ applicationElement.addEventListener("change", (event) => {
     getEateries().then((allEateries) => {
       let description = allEateries[eateryId[1] - 1].description;
       document.getElementById("eatery_card_details").innerHTML = description;
-      document.getElementById("bizzare_deets").style.visibility = "hidden";
+      document.getElementById("eatery_card_details").style.visibility =
+        "hidden";
     });
   }
 });
@@ -116,47 +107,34 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-// document
-//   .querySelector("#park_detailsButton")
-//   .addEventListener("click", ParkDataManager.renderSinglePark);
-
-
-
-
 applicationElement.addEventListener("click", (event) => {
-  if (event.target.id ==="saveTrip") {
-    
-    let elementS = document.getElementById("state")
-    let state = elementS.options[elementS.selectedIndex].text
-    
-    let elementE = document.getElementById("eatery")
-    let eatery = elementE.options[elementE.selectedIndex].text
-    
-    let elementB = document.getElementById("bizarre")
-    let bizarre = elementB.options[elementB.selectedIndex].text
-    
-    let elementP = document.getElementById("parkDropdown")
-    let park = elementP.options[elementP.selectedIndex].text
+  if (event.target.id === "saveTrip") {
+    let elementS = document.getElementById("state");
+    let state = elementS.options[elementS.selectedIndex].text;
+
+    let elementE = document.getElementById("eatery");
+    let eatery = elementE.options[elementE.selectedIndex].text;
+
+    let elementB = document.getElementById("bizarre");
+    let bizarre = elementB.options[elementB.selectedIndex].text;
+
+    let elementP = document.getElementById("parkDropdown");
+    let park = elementP.options[elementP.selectedIndex].text;
 
     const tripObject = {
       bizarre: bizarre,
       eatery: eatery,
-      park:{
+      park: {
         state: state,
-        parkName: park
-      }
-		}
+        parkName: park,
+      },
+    };
 
-    saveTrip(tripObject)
-    
-  
- 
-    
-    
-
-
-    // let park = "document.getElementById("").value";
-    // let eatery = "document.getElementById("").value";
-    // let bizarre = "document.getElementById("").value";
+    saveTrip(tripObject).then(
+      getSavedTrips().then((allTrips) => {
+        allTrips.push(tripObject);
+        asideSelectionFormatter(allTrips);
+      })
+    );
   }
 });
