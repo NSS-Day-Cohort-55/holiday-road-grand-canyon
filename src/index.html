@@ -18,61 +18,62 @@
             <div class="header_startingPoint">Nashville,TN</div>
         </div>
     </header>
-    <main>
-        <div class="middle_title">
-            <h1>Plan Your Next Great Trip!</h1>
-        </div>
-        <div class="middle_threeCardArea">
-            <div id="nationalParkCard" class="middle_card">
-                <h3>National Parks</h3>
-                <div id="card_stateSelect" class="card_selectBox"> Your State</div>
-                <div class="card_selectionList">
+    <div id="main_aside" class="main_aside">
+        <main id="main">
+            <!-- gonna try a fancy sidebar -->
+            <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button>
 
-                    <!-- nationalParks go here -->
+
+            <div class="middle_title">
+                <h1>Plan Your Next Great Trip!</h1>
+            </div>
+            <div class="middle_threeCardArea">
+                <div id="nationalParkCard" class="middle_card">
+                    <h3>National Parks</h3>
+                    <div id="card_stateSelect" class="card_selectBox"> Your State</div>
+                    <div class="card_selectionList">
+
+                        <!-- nationalParks go here -->
+                    </div>
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="park_detailsButton" class="park_detailsButton">See details</button>
+                    <div id="parkCardDetails" class="card_details"></div>
                 </div>
-                <div class="card_userSelection">User Selection</div>
-                <button id="park_detailsButton" class="park_detailsButton">See details</button>
-                <div id="parkCardDetails" class="card_details"></div>
-            </div>
 
-            <div id="eateryCard" class="middle_card">
-                <h3>Eateries</h3>
-                <div id="card_eaterySelect" class="card_selectBox"> Select an Eatery</div>
+                <div id="eateryCard" class="middle_card">
+                    <h3>Eateries</h3>
+                    <div id="card_eaterySelect" class="card_selectBox"> Select an Eatery</div>
 
-                <div class="card_userSelection">User Selection</div>
-                <button id="eatDetailButton" class="card_detailsButton">See details</button>
-                <div id="eatery_card_details" class="card_details"></div>
-            </div>
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="eatDetailButton" class="card_detailsButton">See details</button>
+                    <div id="eatery_card_details" class="card_details"></div>
+                </div>
 
-            <div id="bizzareCard" class="middle_card">
-                <h3>Bizzare Place</h3>
-                <div id="card_bizarreSelect" class="card_selectBox"> Your Attraction</div>
+                <div id="bizzareCard" class="middle_card">
+                    <h3>Bizzare Place</h3>
+                    <div id="card_bizarreSelect" class="card_selectBox"> Your Attraction</div>
 
-                <div class="card_userSelection">User Selection</div>
-                <button id="bizarre_button" class="card_detailsButton">See details</button>
-                <div id="bizzare_deets" class="card_details"></div>
+                    <div class="card_userSelection">User Selection</div>
+                    <button id="bizarre_button" class="card_detailsButton">See details</button>
+                    <div id="bizzare_deets" class="card_details"></div>
+                </div>
             </div>
-        </div>
-        <div class="middle_weather">
-            <div class="weather_title">
+            <div class="middle_weather">
+                <div class="weather_title">
+                </div>
+                <div class=weather_card_area id="weather_card_area">
+                </div>
             </div>
-            <div class=weather_card_area id="weather_card_area">
+            <div class="middle_save">
+                <button id="saveTrip">Save My Trip</button>
             </div>
-        </div>
-        <div class="middle_save">
-            <button id="saveTrip">Save Trip</button>
-        </div>
-    </main>
-    <aside class="savedTrips">
-        <!-- <div class="savedTripsCard">
-            <div class="savedTrip">
-                <p>State</p>
-                <p>Park</p>
-                <p>Eatery</p>
-                <p>Bizarre</p>
-            </div>
-        </div> -->
-    </aside>
+        </main>
+        <aside id="savedTrips" class="savedTrips">
+            <!-- This is a button -->
+
+            <!-- This is where the JS goes -->
+        </aside>
+    </div>
     <footer>
 
     </footer>

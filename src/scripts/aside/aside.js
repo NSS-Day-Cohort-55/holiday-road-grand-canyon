@@ -19,7 +19,8 @@
 
 export const asideSelectionFormatter = (asideArr) => {
     let asidehtmlPosition = document.querySelector(".savedTrips")
-    let asideHTMLelement = `<div class="savedTripCard">`;
+    let asideHTMLelement = `<div class="savedTripCard">
+    <button id="closebtn" class="closebtn">&times;</button>`;
 
     for(const asideObj of asideArr){
         asideHTMLelement += `<div class="savedTrip">
