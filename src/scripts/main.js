@@ -1,4 +1,4 @@
-import * as WeatherDataManager from "./weather/WeatherDataManager.js";
+
 import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
 
@@ -11,6 +11,9 @@ import { bizarreSelectionFormatter } from "./attractions/attractions.js";
 import { renderWeather } from "./weather/RenderWeather.js";
 
 import * as ParkDataManager from "./parks/ParkDataManager.js";
+import { asideSelectionFormatter } from "./aside/aside.js";
+import { getSavedTrips } from "./aside/asideDataManager.js";
+
 
 renderWeather("Nashville", "TN");
 
@@ -29,6 +32,11 @@ getEateries().then((allEateries) => {
 
 getBizarre().then((allBizarre) => {
   bizarreSelectionFormatter(allBizarre);
+});
+
+//This makes the aside populate with Saved Trips
+getSavedTrips().then((allTrips) => {
+  asideSelectionFormatter(allTrips);
 });
 
 //for all the event listeners
