@@ -44,3 +44,35 @@
     bottom:0;
     right: 50%;
 }
+
+main {
+    /*----------- change here */
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+    width:100%;
+  }
+  
+.openbtn {
+font-size: 20px;
+cursor: pointer;
+background-color: #111;
+color: white;
+padding: 10px 15px;
+border: none;
+}
+
+.openbtn:hover {
+background-color: #444;
+}
+
+/* .closebtn {
+    font-size: 20px;
+cursor: pointer;
+background-color: #111;
+color: white;
+padding: 10px 15px;
+border: none;
+}
+.closebtn:hover {
+    background-color: #444;
+    } */
