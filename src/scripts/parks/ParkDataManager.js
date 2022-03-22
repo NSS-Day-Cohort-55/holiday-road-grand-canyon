@@ -19,7 +19,6 @@ export const getParkByCode = (code) => {
   return fetch(fullURL)
     .then((response) => response.json())
     .then((fortnite) => {
-      console.log(fortnite);
       return fortnite;
     });
 };
@@ -31,6 +30,7 @@ export const chooseState = (anEvent) => {
   document.querySelector("#parkCardDetails").innerHTML = "";
   const weatherParent = document.getElementById("weather_card_area");
   weatherParent.innerHTML = "";
+  document.querySelector(".weather_title").innerHTML = "";
 };
 
 export const choosePark = (event) => {

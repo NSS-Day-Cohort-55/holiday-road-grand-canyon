@@ -138,3 +138,27 @@ applicationElement.addEventListener("click", (event) => {
     );
   }
 });
+
+const saveTrips = document.querySelector("#saveTrip");
+saveTrips.disabled = true;
+applicationElement.addEventListener("change", (event) => {
+  if (
+    event.target.id === "parkDropdown" ||
+    event.target.id === "eatery" ||
+    event.target.id === "bizarre"
+  ) {
+    if (
+      document.getElementById("parkDropdown").options[
+        document.getElementById("parkDropdown").selectedIndex
+      ].disabled === false &&
+      document.getElementById("eatery").options[
+        document.getElementById("eatery").selectedIndex
+      ].disabled === false &&
+      document.getElementById("bizarre").options[
+        document.getElementById("bizarre").selectedIndex
+      ].disabled === false
+    ) {
+      saveTrips.disabled = false;
+    }
+  }
+});
