@@ -14,27 +14,21 @@
 //     }
 // }
 
-
 export const eaterySelectionFormatter = (eateriesArr) => {
-    let eathtmlPosition = document.querySelector("#card_eaterySelect")
-    let eateryHTMLelement = `<select name="eatery" id="eatery">
-    <option value="eat--aa" selected="selected">Select an Eatery</option>`;
+  let eathtmlPosition = document.querySelector("#card_eaterySelect");
+  let eateryHTMLelement = `<select name="eatery" id="eatery">
+    <option value="eat--aa" selected="selected" disabled>Select an Eatery</option>`;
 
-    for(const eateryObj of eateriesArr){
-        eateryHTMLelement += 
-        `<option value="eat--${eateryObj.id}">${eateryObj.businessName}</option>`
-    }
-    eateryHTMLelement += `</select>`
-    eathtmlPosition.innerHTML = `${eateryHTMLelement}` 
-       
-}
-
+  for (const eateryObj of eateriesArr) {
+    eateryHTMLelement += `<option value="eat--${eateryObj.id}">${eateryObj.businessName}</option>`;
+  }
+  eateryHTMLelement += `</select>`;
+  eathtmlPosition.innerHTML = `${eateryHTMLelement}`;
+};
 
 // let htmlElement = `<p>${eateryObj.description}</p>`;
 //     const insertHTMLpoint = document.querySelector("#eatery_card_details")
 //     insertHTMLpoint.innerHTML = `${htmlElement}`
-
-
 
 // export const eaterySelected = (value) => {
 //     let eathtmlPosition = document.querySelector("#card_eaterySelect")
@@ -42,10 +36,9 @@ export const eaterySelectionFormatter = (eateriesArr) => {
 //     <option value="" selected="selected">Select an Eatery</option>`;
 
 //     for(const eateryObj of eateriesArr){
-//         eateryHTMLelement += 
+//         eateryHTMLelement +=
 //         `<option value="eat--${eateryObj.id}">${eateryObj.businessName}</option>`
 //     }
 //     eateryHTMLelement += ` </select>`
-//     eathtmlPosition.innerHTML = `${eateryHTMLelement}`    
+//     eathtmlPosition.innerHTML = `${eateryHTMLelement}`
 // }
-

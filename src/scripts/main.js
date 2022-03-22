@@ -1,21 +1,12 @@
-
 import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
-
 import { getEateries } from "./eateries/EateryDataManager.js";
 import { eaterySelectionFormatter } from "./eateries/eateries.js";
-
 import { getBizarre } from "./attractions/AttractionDataManager.js";
 import { bizarreSelectionFormatter } from "./attractions/attractions.js";
-
-import { renderWeather } from "./weather/RenderWeather.js";
-
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 import { asideSelectionFormatter } from "./aside/aside.js";
 import { getSavedTrips, saveTrip } from "./aside/asideDataManager.js";
- 
-
-renderWeather("Nashville", "TN");
 
 //some code for getting all the states for the state drop down box
 getStates().then((allStates) => {
@@ -50,7 +41,6 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
-
 //eatery
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "eatery") {
@@ -60,7 +50,8 @@ applicationElement.addEventListener("change", (event) => {
     getEateries().then((allEateries) => {
       let description = allEateries[eateryId[1] - 1].description;
       document.getElementById("eatery_card_details").innerHTML = description;
-      document.getElementById("bizzare_deets").style.visibility = "hidden";
+      document.getElementById("eatery_card_details").style.visibility =
+        "hidden";
     });
   }
 });
@@ -116,58 +107,78 @@ applicationElement.addEventListener("click", (event) => {
   }
 });
 
-// document
-//   .querySelector("#park_detailsButton")
-//   .addEventListener("click", ParkDataManager.renderSinglePark);
-
-
-
-
 applicationElement.addEventListener("click", (event) => {
-  if (event.target.id ==="saveTrip") {
-    
-    let elementS = document.getElementById("state")
-    let state = elementS.options[elementS.selectedIndex].text
-    
-    let elementE = document.getElementById("eatery")
-    let eatery = elementE.options[elementE.selectedIndex].text
-    
-    let elementB = document.getElementById("bizarre")
-    let bizarre = elementB.options[elementB.selectedIndex].text
-    
-    let elementP = document.getElementById("parkDropdown")
-    let park = elementP.options[elementP.selectedIndex].text
+  if (event.target.id === "saveTrip") {
+    let elementS = document.getElementById("state");
+    let state = elementS.options[elementS.selectedIndex].text;
+
+    let elementE = document.getElementById("eatery");
+    let eatery = elementE.options[elementE.selectedIndex].text;
+
+    let elementB = document.getElementById("bizarre");
+    let bizarre = elementB.options[elementB.selectedIndex].text;
+
+    let elementP = document.getElementById("parkDropdown");
+    let park = elementP.options[elementP.selectedIndex].text;
 
     const tripObject = {
       bizarre: bizarre,
       eatery: eatery,
-      park:{
+      park: {
         state: state,
-        parkName: park
-      }
-		}
+        parkName: park,
+      },
+    };
 
-    saveTrip(tripObject)
+    saveTrip(tripObject).then(
+      getSavedTrips().then((allTrips) => {
+        allTrips.push(tripObject);
+        asideSelectionFormatter(allTrips);
+      })
+    );
+  }
+});
+//
+const saveTrips = document.querySelector("#saveTrip");
+saveTrips.disabled = true;
+applicationElement.addEventListener("change", (event) => {
+  if (
+    event.target.id === "parkDropdown" ||
+    event.target.id === "eatery" ||
+    event.target.id === "bizarre"
+  ) {
+    if (
+      document.getElementById("parkDropdown").options[
+        document.getElementById("parkDropdown").selectedIndex
+      ].disabled === false &&
+      document.getElementById("eatery").options[
+        document.getElementById("eatery").selectedIndex
+      ].disabled === false &&
+      document.getElementById("bizarre").options[
+        document.getElementById("bizarre").selectedIndex
+      ].disabled === false
+    ) {
+      saveTrips.disabled = false;
+    }
   }
 });
 
-
 //this makes the sidebar open and close
 applicationElement.addEventListener("click", (event) => {
-  if(event.target.id==="openbtn"){
+  if (event.target.id === "openbtn") {
     document.getElementById("savedTrips").style.width = "250px";
     //----------------------------------------- change here
     document.getElementById("main_aside").style.marginRight = "250px";
     document.getElementById("closebtn").style.visibility = "visible";
-  } 
-})
+  }
+});
 
 applicationElement.addEventListener("click", (event) => {
-  if(event.target.id==="closebtn"){
+  if (event.target.id === "closebtn") {
     document.getElementById("savedTrips").style.width = "0";
     // -------------------------------------------change here
     document.getElementById("main_aside").style.marginLeft = "0";
     document.getElementById("main_aside").style.marginRight = "0";
     document.getElementById("closebtn").style.visibility = "hidden";
-  }    
-})
+  }
+});
