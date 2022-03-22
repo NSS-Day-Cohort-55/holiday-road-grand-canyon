@@ -1,10 +1,16 @@
 import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
+
 import { getEateries } from "./eateries/EateryDataManager.js";
-import { eaterySelectionFormatter } from "./eateries/eateries.js";
+import { eaterySelectionFormatter, renderEateryHTML } from "./eateries/eateries.js";
+
 import { getBizarre } from "./attractions/AttractionDataManager.js";
-import { bizarreSelectionFormatter } from "./attractions/attractions.js";
+import { bizarreSelectionFormatter, renderBizarreHTML } from "./attractions/attractions.js";
+
+import { renderWeather } from "./weather/RenderWeather.js";
+
 import * as ParkDataManager from "./parks/ParkDataManager.js";
+
 import { asideSelectionFormatter } from "./aside/aside.js";
 import { getSavedTrips, saveTrip } from "./aside/asideDataManager.js";
 
@@ -44,28 +50,29 @@ applicationElement.addEventListener("change", (event) => {
 //eatery
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "eatery") {
-    document.getElementById("eatery_card_details").style.visibility = "hidden";
-    let eateryId = event.target.value.split("--");
-    console.log(eateryId[1]);
-    getEateries().then((allEateries) => {
-      let description = allEateries[eateryId[1] - 1].description;
-      document.getElementById("eatery_card_details").innerHTML = description;
-      document.getElementById("eatery_card_details").style.visibility =
-        "hidden";
-    });
+    renderEateryHTML(event);
+    // document.getElementById("eatery_card_details").style.visibility = "hidden";
+    // let eateryId = event.target.value.split("--");
+    // console.log(eateryId[1]);
+    // getEateries().then((allEateries) => {
+    //   let description = allEateries[eateryId[1] - 1].description;
+    //   document.getElementById("eatery_card_details").innerHTML = description;
+    //   document.getElementById("bizzare_deets").style.visibility = "hidden";
+    // });
   }
 });
 
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "bizarre") {
-    document.getElementById("bizzare_deets").style.visibility = "hidden";
-    let bizId = event.target.value.split("--");
-    console.log(bizId[1]);
-    getBizarre().then((allBizarre) => {
-      let description = allBizarre[bizId[1] - 1].description;
-      document.getElementById("bizzare_deets").innerHTML = description;
-      document.getElementById("bizzare_deets").style.visibility = "hidden";
-    });
+    renderBizarreHTML(event);
+    // document.getElementById("bizzare_deets").style.visibility = "hidden";
+    // let bizId = event.target.value.split("--");
+    // console.log(bizId[1]);
+    // getBizarre().then((allBizarre) => {
+    //   let description = allBizarre[bizId[1] - 1].description;
+    //   document.getElementById("bizzare_deets").innerHTML = description;
+    //   document.getElementById("bizzare_deets").style.visibility = "hidden";
+    // });
   }
 });
 
