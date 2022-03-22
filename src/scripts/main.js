@@ -148,15 +148,26 @@ applicationElement.addEventListener("click", (event) => {
 		}
 
     saveTrip(tripObject)
-    
-  
- 
-    
-    
-
-
-    // let park = "document.getElementById("").value";
-    // let eatery = "document.getElementById("").value";
-    // let bizarre = "document.getElementById("").value";
   }
 });
+
+
+//this makes the sidebar open and close
+applicationElement.addEventListener("click", (event) => {
+  if(event.target.id==="openbtn"){
+    document.getElementById("savedTrips").style.width = "250px";
+    //----------------------------------------- change here
+    document.getElementById("main_aside").style.marginRight = "250px";
+    document.getElementById("closebtn").style.visibility = "visible";
+  } 
+})
+
+applicationElement.addEventListener("click", (event) => {
+  if(event.target.id==="closebtn"){
+    document.getElementById("savedTrips").style.width = "0";
+    // -------------------------------------------change here
+    document.getElementById("main_aside").style.marginLeft = "0";
+    document.getElementById("main_aside").style.marginRight = "0";
+    document.getElementById("closebtn").style.visibility = "hidden";
+  }    
+})
