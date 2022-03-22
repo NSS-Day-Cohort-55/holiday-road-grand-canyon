@@ -12,8 +12,8 @@ import { renderWeather } from "./weather/RenderWeather.js";
 
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 import { asideSelectionFormatter } from "./aside/aside.js";
-import { getSavedTrips } from "./aside/asideDataManager.js";
-
+import { getSavedTrips, saveTrip } from "./aside/asideDataManager.js";
+ 
 
 renderWeather("Nashville", "TN");
 
@@ -50,6 +50,8 @@ applicationElement.addEventListener("change", (event) => {
   }
 });
 
+
+//eatery
 applicationElement.addEventListener("change", (event) => {
   if (event.target.id === "eatery") {
     document.getElementById("eatery_card_details").style.visibility = "hidden";
@@ -117,3 +119,44 @@ applicationElement.addEventListener("click", (event) => {
 // document
 //   .querySelector("#park_detailsButton")
 //   .addEventListener("click", ParkDataManager.renderSinglePark);
+
+
+
+
+applicationElement.addEventListener("click", (event) => {
+  if (event.target.id ==="saveTrip") {
+    
+    let elementS = document.getElementById("state")
+    let state = elementS.options[elementS.selectedIndex].text
+    
+    let elementE = document.getElementById("eatery")
+    let eatery = elementE.options[elementE.selectedIndex].text
+    
+    let elementB = document.getElementById("bizarre")
+    let bizarre = elementB.options[elementB.selectedIndex].text
+    
+    let elementP = document.getElementById("parkDropdown")
+    let park = elementP.options[elementP.selectedIndex].text
+
+    const tripObject = {
+      bizarre: bizarre,
+      eatery: eatery,
+      park:{
+        state: state,
+        parkName: park
+      }
+		}
+
+    saveTrip(tripObject)
+    
+  
+ 
+    
+    
+
+
+    // let park = "document.getElementById("").value";
+    // let eatery = "document.getElementById("").value";
+    // let bizarre = "document.getElementById("").value";
+  }
+});
