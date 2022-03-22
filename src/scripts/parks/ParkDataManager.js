@@ -29,6 +29,8 @@ export const chooseState = (anEvent) => {
 };
 
 export const choosePark = (event) => {
+  document.querySelector("#parkCardDetails").innerHTML = "";
+  document.getElementById("parkCardDetails").style.visibility = "hidden";
   parkCode = event.target.value;
 };
 
@@ -44,12 +46,7 @@ export const renderParkHTML = (parkList) => {
 
 export const renderSinglePark = () => {
   const thisPark = getParkByCode(parkCode).then((thisPark) => {
-    let thisHTML = `
-    <ul>
-        <li>${thisPark.data[0].fullName}</li>
-        <li>${thisPark.data[0].description}</li>
-        <li>${thisPark.data[0].states}</li>
-    </ul>`;
+    let thisHTML = `${thisPark.data[0].description}`;
     document.querySelector("#parkCardDetails").innerHTML = thisHTML;
   });
 };
