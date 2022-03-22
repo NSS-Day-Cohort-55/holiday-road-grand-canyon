@@ -30,6 +30,7 @@ export const chooseState = (anEvent) => {
 
 export const choosePark = (event) => {
   document.querySelector("#parkCardDetails").innerHTML = "";
+  document.getElementById("parkCardDetails").style.visibility = "hidden";
   parkCode = event.target.value;
 };
 
