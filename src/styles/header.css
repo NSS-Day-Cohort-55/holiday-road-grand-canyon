@@ -2,25 +2,32 @@
   /* margin-bottom: 1rem; */
   font-size: x-large;
   font-weight: bold;
+  margin-bottom:1em;
+  padding-left: 1rem;
 }
 
 .header_welcomeMessage {
-  background-color: goldenrod;
-  padding-left: 0.5rem;
+  padding-left: 1rem;
   min-width: 90%;
   line-height: 50px;
-  font-size: large;
+  font-size: 24px;
+  margin-bottom: 1rem;
+
 }
 
 .header_startingPointMessage {
   max-width: 20%;
-  margin-bottom: 1rem;
+  /* margin-bottom: 1rem; */
   font-style: italic;
+  font-size: 24px;
+  padding-left: 1rem;
 }
 .header_startingPoint {
-  margin-left: 40%;
+  margin-left: 70%;
   margin-bottom: 1rem;
   font-style: normal !important;
+  font-size: 24px;
+  padding-left: 1rem;
 }
 
 .welcome_aside {
@@ -31,13 +38,11 @@
 .openbtn {
   font-size: 20px;
   cursor: pointer;
-  background-color: #111;
-  color: white;
   padding: 10px 15px;
   border: none;
   align-self: flex-end;
 }
 
 .openbtn:hover {
-  background-color: #444;
+  /* background-color: #444;  see colors.css*/
 }
