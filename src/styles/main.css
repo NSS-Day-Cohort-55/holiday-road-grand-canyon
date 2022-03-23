@@ -2,11 +2,14 @@
 @import "header.css";
 @import "cardDetails.css";
 @import "aside.css";
+@import "footer.css";
 @import "buttons.css";
 @import "weather.css";
+@import "colors.css";
 
-.holiday {
-  background-color: blanchedalmond;
+html body {
+  padding: 0;
+  margin: 0;
 }
 
 .main_aside {
@@ -15,5 +18,7 @@
 }
 
 main {
-  border: black 2px solid;
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 0 20px;
+  width: 100%;
 }
