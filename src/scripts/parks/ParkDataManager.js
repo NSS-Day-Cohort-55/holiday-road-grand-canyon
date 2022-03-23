@@ -40,7 +40,7 @@ export const choosePark = (event) => {
     console.log(thisPark);
     let thisHTML = "";
     thisHTML += `
-      <h3>${thisPark.name}<h3>
+      <h3><a href='${thisPark.url}' target='_blank'>${thisPark.name}</a><h3>
       <h4><em>${thisPark.addresses[0].city}, ${thisPark.addresses[0].stateCode}</em></h4>
       <h5>${thisPark.description}</h5>
       <img class ='parkPic' src='${thisPark.images[0].url}' alt='${thisPark.images[0].altText}' />
