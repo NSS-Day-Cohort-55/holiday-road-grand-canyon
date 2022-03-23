@@ -5,12 +5,14 @@
 @import "footer.css";
 @import "buttons.css";
 @import "colors.css";
+@import 'fonts.css';
 
-html body{
-  padding:0;
-  margin:0;
+html body {
+  padding: 0;
+  margin: 0;
 }
 .holiday {
+  
 }
 
 .main_aside {

@@ -1,89 +1,99 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Holiday Road!</title>
-    <link rel="stylesheet" href="./styles/main.css">
-</head>
+    <link rel="stylesheet" href="./styles/main.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cairo&family=Exo:wght@700&family=Titillium+Web&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body class="holiday">
-    <header class="header">
-    </header>
+  <body class="holiday">
+    <header class="header"></header>
     <div id="main_aside" class="main_aside">
-        <main id="main">
-            <!-- <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button> -->
-            <!-- gonna try a fancy sidebar -->
+      <main id="main">
+        <!-- <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button> -->
+        <!-- gonna try a fancy sidebar -->
 
-
-            <div class="middle_title">
-                <h1>Plan Your Next Great Trip!</h1>
+        <div class="middle_title">
+          <h1>Plan Your Next Great Trip!</h1>
+        </div>
+        <div class="middle_threeCardArea">
+          <div id="nationalParkCard" class="middle_card">
+            <h2>National Parks</h2>
+            <div id="card_stateSelect" class="card_selectBox">Your State</div>
+            <div class="card_selectionList">
+              <!-- nationalParks go here -->
             </div>
-            <div class="middle_threeCardArea">
-                <div id="nationalParkCard" class="middle_card">
-                    <h2>National Parks</h2>
-                    <div id="card_stateSelect" class="card_selectBox"> Your State</div>
-                    <div class="card_selectionList">
+            <div class="card_userSelection"></div>
+            <button id="park_detailsButton" class="park_detailsButton">
+              See details
+            </button>
+            <div id="parkCardDetails" class="card_details"></div>
+          </div>
 
-                        <!-- nationalParks go here -->
-                    </div>
-                    <div class="card_userSelection">User Selection</div>
-                    <button id="park_detailsButton" class="park_detailsButton">See details</button>
-                    <div id="parkCardDetails" class="card_details"></div>
-                </div>
-
-                <div id="eateryCard" class="middle_card">
-                    <h2>Eateries</h2>
-                    <div id="card_eaterySelect" class="card_selectBox"> Select an Eatery</div>
-
-                    <div class="card_userSelection">User Selection</div>
-                    <button id="eatDetailButton" class="card_detailsButton">See details</button>
-                    <div id="eatery_card_details" class="card_details"></div>
-                </div>
-
-                <div id="bizzareCard" class="middle_card">
-                    <h2>Bizzare Place</h2>
-                    <div id="card_bizarreSelect" class="card_selectBox"> Your Attraction</div>
-
-                    <div class="card_userSelection">User Selection</div>
-                    <button id="bizarre_button" class="card_detailsButton">See details</button>
-                    <div id="bizzare_deets" class="card_details"></div>
-                </div>
+          <div id="eateryCard" class="middle_card">
+            <h2>Eateries</h2>
+            <div id="card_eaterySelect" class="card_selectBox">
+              Select an Eatery
             </div>
-            <div class="middle_weather">
-                <div class="weather_title">
-                </div>
-                <div class=weather_card_area id="weather_card_area">
-                </div>
-            </div>
-            <div class="middle_save">
-                <button id="saveTrip">Save My Trip</button>
-            </div>
-        </main>
-        <aside id="savedTrips" class="savedTrips">
-            <!-- This is a button -->
 
-            <!-- This is where the JS goes -->
-        </aside>
+            <div class="card_userSelection"></div>
+            <button id="eatDetailButton" class="card_detailsButton">
+              See details
+            </button>
+            <div id="eatery_card_details" class="card_details"></div>
+          </div>
+
+          <div id="bizzareCard" class="middle_card">
+            <h2>Bizzare Place</h2>
+            <div id="card_bizarreSelect" class="card_selectBox">
+              Your Attraction
+            </div>
+
+            <div class="card_userSelection"></div>
+            <button id="bizarre_button" class="card_detailsButton">
+              See details
+            </button>
+            <div id="bizzare_deets" class="card_details"></div>
+          </div>
+        </div>
+        <div class="middle_weather">
+          <div class="weather_title"></div>
+          <div class="weather_card_area" id="weather_card_area"></div>
+        </div>
+        <div class="middle_save">
+          <button id="saveTrip">Save My Trip</button>
+        </div>
+      </main>
+      <aside id="savedTrips" class="savedTrips">
+        <!-- This is a button -->
+
+        <!-- This is where the JS goes -->
+      </aside>
     </div>
     <footer>
-        <div> <p class="footer_title">&copy; Grand Canyon Travel Planners</p> </div>
-        <div>
-            <p class="footer_title">Contact Us<p>
-            <p>Slack channel</p>
-
-        </div>
-        <div> 
-            <p class="footer_title">Follow Us<p>
-            <h6>Dev Team</h6>
-            <p>aljreal@github</p> 
-            <p>jav@github.com</p> 
-            <p>rushay@github.com</p>
-        </div>
+      <div><p class="footer_title">&copy; Grand Canyon Travel Planners</p></div>
+      <div>
+        <p class="footer_title">Contact Us</p>
+        <p></p>
+        <p>Slack channel</p>
+      </div>
+      <div>
+        <p class="footer_title">Follow Us</p>
+        <p></p>
+        <h6>Dev Team</h6>
+        <p>aljreal@github</p>
+        <p>jav@github.com</p>
+        <p>rushay@github.com</p>
+      </div>
     </footer>
     <script type="module" src="./scripts/main.js"></script>
-</body>
-
+  </body>
 </html>
