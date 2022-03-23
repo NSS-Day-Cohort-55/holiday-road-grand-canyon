@@ -19,6 +19,7 @@ import * as ParkDataManager from "./parks/ParkDataManager.js";
 
 import { asideSelectionFormatter } from "./aside/aside.js";
 import { getSavedTrips, saveTrip } from "./aside/asideDataManager.js";
+import * as userDataManager from "./users/userDataManager.js";
 
 //some code for getting all the states for the state drop down box
 getStates().then((allStates) => {
@@ -38,7 +39,7 @@ getBizarre().then((allBizarre) => {
 });
 
 //This makes the aside populate with Saved Trips
-getSavedTrips().then((allTrips) => {
+getSavedTrips(userDataManager.getLoggedInUser().id).then((allTrips) => {
   asideSelectionFormatter(allTrips);
 });
 
@@ -141,6 +142,7 @@ applicationElement.addEventListener("click", (event) => {
         state: state,
         parkName: park,
       },
+      userId: userDataManager.getLoggedInUser().id,
     };
 
     saveTrip(tripObject).then(
@@ -197,7 +199,7 @@ applicationElement.addEventListener("click", (event) => {
 });
 
 const holidayRoad = () => {
-  startHeader();
+  startHeader(userDataManager.getLoggedInUser());
 };
 
 holidayRoad();

@@ -33,7 +33,6 @@
 .welcome_aside {
   display: flex;
   justify-content: space-between;
-  background-color: goldenrod;
 }
 
 .openbtn {
