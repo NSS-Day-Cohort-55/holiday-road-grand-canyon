@@ -2,11 +2,30 @@
   visibility: hidden;
 }
 
-h4 {
-  font: verdana;
-}
-
 .amenityIcon {
   width: 50px;
-  
+}
+
+.parkPic {
+  /* width: 200px; */
+  max-width: 100%;
+}
+
+#parkDropdown {
+  width: 100%;
+}
+
+#eatery {
+  width: 100%;
+}
+
+#bizarre {
+  width: 100%;
+}
+
+.middle_threeCardArea h2 {
+  background-color: #808080;
+  width: 200%;
+  padding: 1em 0em;
+  margin-left: -1em;
 }

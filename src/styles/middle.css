@@ -1,7 +1,3 @@
-.middle_card {
-  background-color: lightgreen;
-}
-
 .middle_threeCardArea {
   display: flex;
   width: 100%;
@@ -9,12 +5,14 @@
 }
 
 .middle_card {
+  background-color: lightgreen;
   padding: 0 3rem;
   /* min-height: 500px;
     min-width: 400px; */
-  min-width: 20%;
+  min-width: 25%;
   min-height: 500px;
   max-width: 25%;
+  margin: 1px;
 }
 
 .weather_title {
