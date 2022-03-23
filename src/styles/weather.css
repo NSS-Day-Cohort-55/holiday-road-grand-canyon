@@ -1,0 +1,19 @@
+.weather_title {
+  background-color: gray;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
+}
+
+.weather_title h4 {
+  margin-right: 5rem;
+}
+.weather_card_area {
+  display: flex;
+  justify-content: space-between;
+}
+.weather_card {
+  background-color: gray;
+  min-height: 200px;
+  min-width: 275px;
+}

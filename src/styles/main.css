@@ -3,6 +3,7 @@
 @import "cardDetails.css";
 @import "aside.css";
 @import "buttons.css";
+@import "weather.css";
 
 .holiday {
   background-color: blanchedalmond;
