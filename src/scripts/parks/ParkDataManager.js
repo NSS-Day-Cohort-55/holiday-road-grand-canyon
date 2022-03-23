@@ -75,5 +75,3 @@ export const renderParkHTML = (parkList) => {
 //   // });
 //   // document.getElementById("parkCardDetails").style.visibility = "hidden";
 // };
-
-RenderWeather.renderWeather("Nashville", "TN");
