@@ -20,6 +20,7 @@
   font-style: italic;
   font-size: 24px;
   padding-left: 1rem;
+  color: white;
 }
 .header_startingPoint {
   margin-left: 70%;
@@ -39,4 +40,8 @@
   cursor: pointer;
   padding: 10px 15px;
   border: none;
+}
+
+.header_logo {
+  color: white;
 }

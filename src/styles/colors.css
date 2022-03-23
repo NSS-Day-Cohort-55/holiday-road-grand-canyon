@@ -2,7 +2,7 @@
 
 /* This is the entire background of the webpage */
 .holiday {
-  background-color: rgb(255, 192, 203) !important;
+  background-color: #0b152b !important;
 }
 
 /* HEADER AREA */
@@ -11,13 +11,8 @@
   background-color: #111; /* Black*/
 }
 
-.openbtn {
-  background-color: #111;
-  color: white;
-}
-
 .openbtn:hover {
-  background-color: #444;
+  background-color: #c9e1f9;
 }
 
 /* ASIDE AREA */
@@ -58,19 +53,19 @@ footer {
 #eatery,
 #bizarre,
 #parkDropdown {
-  background-color: antiquewhite;
+  background-color: white;
 }
 
 .welcome_aside,
 .middle_threeCardArea h2,
 .weather_title,
 .closebtn {
-  background-color: goldenrod;
+  background-color: #62a2e1;
 }
 
 .middle_card,
 .weather_card {
-  background-color: tan;
+  background-color: #d1e0f4;
 }
 
 footer,
@@ -79,8 +74,8 @@ footer,
 #eatDetailButton,
 #bizarre_button,
 #park_detailsButton {
-  background-color: brown;
+  background-color: #90c2f4;
 }
 .openbtn {
-  color: white;
+  color: #111 !important;
 }
