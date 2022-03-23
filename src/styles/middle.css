@@ -41,11 +41,6 @@
   right: 50%;
 }
 
-main {
-  transition: margin-left 0.5s; /* If you want a transition effect */
-  padding: 0 20px;
-  width: 100%;
-}
 
 /* .closebtn {
     font-size: 20px;
