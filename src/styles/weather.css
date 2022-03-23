@@ -6,7 +6,7 @@
 }
 
 .weather_title h4 {
-  margin-right: 5rem;
+  text-align: center;
 }
 .weather_card_area {
   display: flex;
