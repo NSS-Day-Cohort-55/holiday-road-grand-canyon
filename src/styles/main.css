@@ -4,6 +4,7 @@
 @import "aside.css";
 @import "footer.css";
 @import "buttons.css";
+@import "colors.css";
 
 html body{
   padding:0;

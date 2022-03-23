@@ -1,0 +1,20 @@
+/* This is the file for changing around the color palette */
+
+
+
+/* HEADER AREA */
+/* This is the colored banner at the top */
+.welcome_aside{
+    background-color: goldenrod;
+}
+
+/* ASIDE AREA */
+.savedTripCard {
+    color: #818181;
+}
+
+
+footer {
+    background-color:gray;
+
+}
