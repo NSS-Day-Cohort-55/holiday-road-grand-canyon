@@ -1,20 +1,18 @@
-.middle_card {
-    background-color: lightgreen;
-}
-
 .middle_threeCardArea {
     display:flex;
     width:100%;
     justify-content: space-between;
+    /* background-color: lightgreen; */
 }
 
 .middle_card {
+    background-color: lightgreen;
     padding: 0 3rem;
     /* min-height: 500px;
     min-width: 400px; */
-    min-width:20%;
+    min-width:25%;
     min-height: 500px;
-    max-width:25%;
+    max-width: 25%;
 }
 
 .weather_title {

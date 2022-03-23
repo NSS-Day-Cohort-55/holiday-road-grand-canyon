@@ -2,11 +2,24 @@
   visibility: hidden;
 }
 
-h4 {
-  font: verdana;
-}
 
 .amenityIcon {
   width: 50px;
-  
 }
+
+.parkPic {
+  /* width: 200px; */
+  max-width: 100%;
+}
+
+.card_userSelection{
+  width: 50px;
+}
+
+/* .card_selectionList{
+  max-width: 100px;
+}
+
+#card_selectionList{
+  max-width: 100px;
+} */
