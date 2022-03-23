@@ -30,11 +30,16 @@ export const eaterySelectionFormatter = (eateriesArr) => {
 export const renderEateryHTML = (event) => {
   document.getElementById("eatery_card_details").style.visibility = "hidden";
   let eateryId = event.target.value.split("--");
-  console.log(eateryId[1]);
+  // console.log(eateryId[1]);
   getEateries().then((allEateries) => {
+    const thisEatery = allEateries[eateryId[1] - 1];
     let description = "";
-    description += `<h4>${allEateries[eateryId[1] - 1].description}</h4>`;
-    description += checkEatAmeneties(allEateries[eateryId[1] - 1]);
+    description += `
+      <h3>${thisEatery.businessName}</h3>
+      <h4><em>${thisEatery.city}, ${thisEatery.state}</em></h4>
+      <h5>${thisEatery.description}</h5>
+    `;
+    description += checkEatAmeneties(thisEatery);
     document.getElementById("eatery_card_details").innerHTML = description;
     document.getElementById("bizzare_deets").style.visibility = "hidden";
   });
