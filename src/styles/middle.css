@@ -14,30 +14,11 @@
   margin: 1px;
 }
 
-.weather_title {
-  display: flex;
-  align-items: flex-end;
-  margin-bottom: 2rem;
-}
-
-.weather_title h4 {
-  margin-right: 5rem;
-}
-.weather_card_area {
-  display: flex;
-  justify-content: space-between;
-}
-.weather_card {
-  min-height: 100px;
-  min-width: 100px;
-}
-
 .middle_save {
   position: fixed;
   bottom: 0;
   right: 50%;
 }
-
 
 /* .closebtn {
     font-size: 20px;

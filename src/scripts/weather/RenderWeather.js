@@ -15,9 +15,8 @@ export const renderWeather = (city, state) => {
           weatherArr[i] = {
             weather: parsedResponse.daily[i].weather[0].main,
             iconUrl: `http://openweathermap.org/img/wn/${parsedResponse.daily[i].weather[0].icon}@2x.png`,
-            temp: `${parseInt(parsedResponse.daily[i].temp.max)}°F / ${parseInt(
-              parsedResponse.daily[i].temp.min
-            )}°F`,
+            tempHi: `${parseInt(parsedResponse.daily[i].temp.max)}°F`,
+            tempLow: `${parseInt(parsedResponse.daily[i].temp.min)}°F`,
             date: `${parsedResponse.daily[i].dt}`,
           };
         }

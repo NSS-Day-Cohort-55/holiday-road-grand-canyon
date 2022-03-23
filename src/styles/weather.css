@@ -1,0 +1,47 @@
+.weather_title {
+  display: flex;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  font-size: 24px;
+}
+.weather_title h3 {
+  margin-right: 25%;
+  margin-left: 5px;
+}
+
+.weather_card_area {
+  display: flex;
+  justify-content: space-between;
+}
+.weather_card {
+  min-height: 100px;
+  min-width: 17%;
+  margin-bottom: 10px;
+}
+
+.weather_card #date {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+
+.weather_card #weather {
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+}
+.weather_card img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.weather_card #tempHi {
+  font-size: 16px;
+  font-weight: 550;
+  text-align: center;
+}
+.weather_card #tempLow {
+  font-size: 16px;
+  font-weight: 550;
+  text-align: center;
+}
