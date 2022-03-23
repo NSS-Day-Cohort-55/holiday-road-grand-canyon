@@ -1,58 +1,54 @@
 /* This is the file for changing around the color palette */
 
-
 /* This is the entire background of the webpage */
 .holiday {
-
+  background-color: rgb(255, 192, 203) !important;
 }
 
 /* HEADER AREA */
 
 .savedTrips {
-    background-color: #111; /* Black*/ 
+  background-color: #111; /* Black*/
 }
 
 .openbtn {
-    background-color: #111;
-    color: white;
+  background-color: #111;
+  color: white;
 }
 
 .openbtn:hover {
-    background-color: #444;
+  background-color: #444;
 }
 
 /* ASIDE AREA */
 .savedTripCard {
-    color: #818181;
+  color: #818181;
 }
 
 /* MIDDLE AREA */
 
 /* These are the banners for "National Parks" "Eateries" "Bizarre Places" */
 .middle_threeCardArea h2 {
-    background-color: #808080;
+  background-color: #808080;
 }
 
 .middle_card {
-    background-color: lightgreen;
-    
+  background-color: lightgreen;
 }
 
 /* MIDDLE_WEATHER */
 .weather_title {
-    background-color: gray;
+  background-color: gray;
 }
 
 .weather_card {
-    background-color: gray;
+  background-color: gray;
 }
 
 /* FOOTER */
 footer {
-    background-color:gray;
-    
+  background-color: gray;
 }
-
 
 /* Configuration A */
 /* header banner, parks banner and weather all the same color */
@@ -62,21 +58,19 @@ footer {
 #eatery,
 #bizarre,
 #parkDropdown {
-    background-color: antiquewhite;
-
+  background-color: antiquewhite;
 }
 
 .welcome_aside,
 .middle_threeCardArea h2,
 .weather_title,
-.closebtn{
-    background-color: goldenrod;
+.closebtn {
+  background-color: goldenrod;
 }
 
 .middle_card,
 .weather_card {
-    background-color: tan;
-    
+  background-color: tan;
 }
 
 footer,
@@ -84,13 +78,9 @@ footer,
 .savedTrips,
 #eatDetailButton,
 #bizarre_button,
-#park_detailsButton
- {
-    background-color:brown;
-    
+#park_detailsButton {
+  background-color: brown;
 }
 .openbtn {
-    color: white;
+  color: white;
 }
-
-

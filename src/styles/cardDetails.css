@@ -25,21 +25,21 @@
 
 .middle_threeCardArea h2 {
   width: 125%;
-  padding: 1em .25em;
+  padding: 1em 0.25em;
   margin-left: -1em;
   margin-right: -2em;
 }
 
 .middle_threeCardArea h3 {
-  margin: -.01em 0em;
+  margin: -0.01em 0em;
 }
 
 .middle_threeCardArea h4 {
-  margin: -.01em 0em;
+  margin: -0.01em 0em;
 }
 
 .middle_threeCardArea h5 {
-  margin: -.01em 0em;
+  margin: -0.01em 0em;
 }
 
 select {
