@@ -2,12 +2,18 @@ import { getStates } from "./directions/DirectionDataManager.js";
 import { stateSelectionFormatter } from "./directions/states.js";
 
 import { getEateries } from "./eateries/EateryDataManager.js";
-import { eaterySelectionFormatter, renderEateryHTML } from "./eateries/eateries.js";
+import {
+  eaterySelectionFormatter,
+  renderEateryHTML,
+} from "./eateries/eateries.js";
 
 import { getBizarre } from "./attractions/AttractionDataManager.js";
-import { bizarreSelectionFormatter, renderBizarreHTML } from "./attractions/attractions.js";
+import {
+  bizarreSelectionFormatter,
+  renderBizarreHTML,
+} from "./attractions/attractions.js";
 
-import { renderWeather } from "./weather/RenderWeather.js";
+import { startHeader } from "./header/header.js";
 
 import * as ParkDataManager from "./parks/ParkDataManager.js";
 
@@ -189,3 +195,9 @@ applicationElement.addEventListener("click", (event) => {
     document.getElementById("closebtn").style.visibility = "hidden";
   }
 });
+
+const holidayRoad = () => {
+  startHeader();
+};
+
+holidayRoad();
