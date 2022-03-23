@@ -47,10 +47,10 @@ export const renderBizarreHTML = (event) => {
 const checkBizAmeneties = (bizObj) => {
   let HTMLString = "";
   if (bizObj.ameneties.souvenirs === true) {
-    HTMLString += `<img class ='amenityIcon' src='././images/souvenirIcon.webp' alt='souvenirs' />`;
+    HTMLString += `<img class ='amenityIcon' src='././images/souvenirIcon.png' alt='souvenirs' />`;
   }
   if (bizObj.ameneties.restrooms === true) {
-    HTMLString += `<img class ='amenityIcon' src='././images/restroomIcon.webp' alt='restrooms'/>`;
+    HTMLString += `<img class ='amenityIcon' src='././images/restroomIcon.png' alt='restrooms'/>`;
   }
   return HTMLString;
 };

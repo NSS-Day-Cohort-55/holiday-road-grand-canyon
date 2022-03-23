@@ -63,7 +63,7 @@ const checkEatAmeneties = (eatObj) => {
     HTMLString += `<img class ='amenityIcon' src='././images/playgroundIcon.webp' alt='souvenirs' />`;
   }
   if (eatObj.ameneties.restrooms === true) {
-    HTMLString += `<img class ='amenityIcon' src='././images/restroomIcon.webp' alt='restrooms'/>`;
+    HTMLString += `<img class ='amenityIcon' src='././images/restroomIcon.png' alt='restrooms'/>`;
   }
   return HTMLString;
 };

@@ -11,7 +11,7 @@
   max-width: 100%;
 }
 
-#parkDropdown {
+/* #parkDropdown {
   width: 100%;
 }
 
@@ -21,11 +21,36 @@
 
 #bizarre {
   width: 100%;
-}
+} */
 
 .middle_threeCardArea h2 {
   width: 125%;
-  padding: 1em 0em;
+  padding: 1em .25em;
   margin-left: -1em;
   margin-right: -2em;
+}
+
+.middle_threeCardArea h3 {
+  margin: -.01em 0em;
+}
+
+.middle_threeCardArea h4 {
+  margin: -.01em 0em;
+}
+
+.middle_threeCardArea h5 {
+  margin: -.01em 0em;
+}
+
+select {
+  width: 100%;
+  font-size: 16px;
+  padding: 1px;
+  margin: 1px 0px;
+}
+
+.middle_threeCardArea button {
+  font-size: 16px;
+  font-weight: bold;
+  margin: 1px 0px;
 }
