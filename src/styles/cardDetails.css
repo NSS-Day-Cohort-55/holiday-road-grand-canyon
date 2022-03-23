@@ -2,7 +2,6 @@
   visibility: hidden;
 }
 
-
 .amenityIcon {
   width: 50px;
 }
@@ -12,14 +11,21 @@
   max-width: 100%;
 }
 
-.card_userSelection{
-  width: 50px;
+#parkDropdown {
+  width: 100%;
 }
 
-/* .card_selectionList{
-  max-width: 100px;
+#eatery {
+  width: 100%;
 }
 
-#card_selectionList{
-  max-width: 100px;
-} */
+#bizarre {
+  width: 100%;
+}
+
+.middle_threeCardArea h2 {
+  background-color: #808080;
+  width: 200%;
+  padding: 1em 0em;
+  margin-left: -1em;
+}
