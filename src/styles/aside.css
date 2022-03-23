@@ -39,15 +39,11 @@
 }
 
 .closebtn {
-  position: absolute;
-  top: 0;
-  right: 25px;
-  font-size: 36px;
-  margin-left: 50px;
-  visibility: hidden;
-  z-index: 1;
-}
-
-.savedTrip {
-  border-bottom: 1px solid;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+    visibility: hidden;
+    z-index: 1;
 }
