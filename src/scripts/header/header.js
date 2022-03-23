@@ -8,6 +8,6 @@ export const startHeader = (userObject) => {
         </div>
         <div class="header_startingPointMessage">
             Your Starting Point...
-            <div class="header_startingPoint">${userObject.startingPoint.city},${userObject.startingPoint.stateCode}</div>
+            <div class="header_startingPoint"><nobr>${userObject.startingPoint.city}, ${userObject.startingPoint.stateCode}</nobr></div>
         </div>`;
 };
