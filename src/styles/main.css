@@ -6,6 +6,7 @@
 @import "buttons.css";
 @import "weather.css";
 @import "colors.css";
+@import "fonts.css";
 
 html body {
   padding: 0;

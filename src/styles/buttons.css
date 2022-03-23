@@ -2,6 +2,14 @@ button {
   cursor: pointer;
 }
 
+#saveTrip {
+  width: 200px;
+  height: 75px;
+  align-self: center;
+  font-weight: bold;
+  font-size: 24px;
+}
+
 #saveTrip:disabled {
   cursor: not-allowed;
 }
