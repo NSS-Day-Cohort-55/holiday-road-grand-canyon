@@ -2,16 +2,17 @@
 @import "header.css";
 @import "cardDetails.css";
 @import "aside.css";
+@import "buttons.css";
 
 .holiday {
-    background-color:blanchedalmond;
+  background-color: blanchedalmond;
 }
 
 .main_aside {
-    display:flex;
-    justify-content: space-between;
+  display: flex;
+  justify-content: space-between;
 }
 
 main {
-    border: black 2px solid;
+  border: black 2px solid;
 }

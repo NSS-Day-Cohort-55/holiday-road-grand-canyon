@@ -1,68 +1,53 @@
 .middle_card {
-    background-color: lightgreen;
+  background-color: lightgreen;
 }
 
 .middle_threeCardArea {
-    display:flex;
-    width:100%;
-    justify-content: space-between;
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
 }
 
 .middle_card {
-    padding: 0 3rem;
-    /* min-height: 500px;
+  padding: 0 3rem;
+  /* min-height: 500px;
     min-width: 400px; */
-    min-width:20%;
-    min-height: 500px;
-    max-width:25%;
+  min-width: 20%;
+  min-height: 500px;
+  max-width: 25%;
 }
 
 .weather_title {
-    background-color: gray;
-    display: flex;
-    align-items: flex-end;
-    margin-bottom: 2rem;
+  background-color: gray;
+  display: flex;
+  align-items: flex-end;
+  margin-bottom: 2rem;
 }
 
-.weather_title h4{
-    margin-right: 5rem;;
+.weather_title h4 {
+  margin-right: 5rem;
 }
 .weather_card_area {
-    display:flex;
-    justify-content: space-between;
-
+  display: flex;
+  justify-content: space-between;
 }
 .weather_card {
-    background-color: gray;
-    min-height: 100px;
-    min-width: 100px;
+  background-color: gray;
+  min-height: 100px;
+  min-width: 100px;
 }
 
 .middle_save {
-    background-color: blue;
-    position:fixed;
-    bottom:0;
-    right: 50%;
+  position: fixed;
+  bottom: 0;
+  right: 50%;
 }
 
 main {
-    /*----------- change here */
-    transition: margin-left .5s; /* If you want a transition effect */
-    padding: 20px;
-    width:100%;
-  }
-  
-.openbtn {
-font-size: 20px;
-cursor: pointer;
-background-color: #111;
-color: white;
-padding: 10px 15px;
-border: none;
-}
-
-.openbtn:hover {
-background-color: #444;
+  /*----------- change here */
+  transition: margin-left 0.5s; /* If you want a transition effect */
+  padding: 20px;
+  width: 100%;
 }
 
 /* .closebtn {
