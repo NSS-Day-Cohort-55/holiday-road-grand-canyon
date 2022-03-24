@@ -21,29 +21,18 @@
 
 
 ## Instructions For Viewing
-1. Navigate to the directory in which you want Holiday Road to reside
-1. run `git clone git@github.com:JavontaeH/hello-world-my-2-cents.git`
-1. run `cd hello-world-my-2-cents`
-1. run `serve` (npm package downloaded here https://www.npmjs.com/package/serve) to create a local server to view the website on
-1. copy % paste local port from serve command into browser 
+1. Navigate to the directory in which you want Holiday Road to reside.
+1. run `git clone https://github.com/NSS-Day-Cohort-55/holiday-road-grand-canyon.git`
+1. run `cd holiday-road-grand-canyon`
+1. run `serve` (npm package downloaded here https://www.npmjs.com/package/serve) to create a local server to view the website on.
+2. run `json-server` (npm package downloaded here https://www.npmjs.com/package/json-server) on the db_getStarted.json in the api file. 
+3. You will need to acquire an API key from OpenWeather.com and NPS and fill in those variables where needed (https://openweathermap.org/api) (https://www.nps.gov/subjects/digital/nps-data-api.htm).
+4. copy & paste local port from serve command into browser.
+5. This project has been closed since 3/24/2022, for help look into the API documentation.
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-## Team Members
+## Contributors
 1. https://github.com/JavontaeH
 2. https://github.com/ActuallyAJL
 3. https://github.com/rushayhays
