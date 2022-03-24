@@ -90,7 +90,8 @@ footer {
 
 #eatDetailButton:hover,
 #bizarre_button:hover,
-#park_detailsButton:hover {
+#park_detailsButton:hover,
+#saveTrip:hover:enabled {
   background-color: #62a2e1 !important;
   border-width: 1px !important;
 }
