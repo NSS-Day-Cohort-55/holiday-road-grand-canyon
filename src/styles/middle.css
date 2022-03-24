@@ -16,8 +16,10 @@
 
 .middle_save {
   position: fixed;
-  bottom: 0;
-  right: 44%;
+  top: 50%;
+  left: 50%;
+  margin-top: 390px; /* Negative half of height. */
+  margin-left: -100px; /* Negative half of width. */
 }
 
 .middle_title {
