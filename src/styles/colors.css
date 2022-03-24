@@ -95,3 +95,8 @@ footer {
   background-color: #62a2e1 !important;
   border-width: 1px !important;
 }
+
+#closebtn:hover {
+  background-color: #0b152b;
+  color: red;
+}
