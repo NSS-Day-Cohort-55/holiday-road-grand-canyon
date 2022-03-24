@@ -1,13 +1,7 @@
 export const startHeader = (userObject) => {
-  document.querySelector(
-    ".header"
-  ).innerHTML = `<div class="header_logo">Grand Canyon Travel Planners</div>
+  document.querySelector(".header").innerHTML = `<div class="header_logo"></div>
   <div class="welcome_aside">
-        <div class="header_welcomeMessage">Welcome, ${userObject.name}!</div>
+        <div class="header_welcomeMessage">Welcome, ${userObject.name}, your starting point is: ${userObject.startingPoint.city}, ${userObject.startingPoint.stateCode}</div>
         <button id="openbtn" class="openbtn"> &#9776; Saved Trips</button>
-        </div>
-        <div class="header_startingPointMessage">
-            Your Starting Point...
-            <div class="header_startingPoint"><nobr>${userObject.startingPoint.city}, ${userObject.startingPoint.stateCode}</nobr></div>
         </div>`;
 };

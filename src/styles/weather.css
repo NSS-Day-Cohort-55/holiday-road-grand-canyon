@@ -2,11 +2,11 @@
   display: flex;
   margin-top: 10px;
   margin-bottom: 10px;
-  font-size: 24px;
 }
-.weather_title h3 {
-  margin-right: 25%;
+.weather_title h2 {
+  margin-right: 30%;
   margin-left: 5px;
+  font-size: 24px !important;
 }
 
 .weather_card_area {

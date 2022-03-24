@@ -67,20 +67,3 @@ const checkEatAmeneties = (eatObj) => {
   }
   return HTMLString;
 };
-
-// let htmlElement = `<p>${eateryObj.description}</p>`;
-//     const insertHTMLpoint = document.querySelector("#eatery_card_details")
-//     insertHTMLpoint.innerHTML = `${htmlElement}`
-
-// export const eaterySelected = (value) => {
-//     let eathtmlPosition = document.querySelector("#card_eaterySelect")
-//     let eateryHTMLelement = `<select name="eatery" id="eatery">
-//     <option value="" selected="selected">Select an Eatery</option>`;
-
-//     for(const eateryObj of eateriesArr){
-//         eateryHTMLelement +=
-//         `<option value="eat--${eateryObj.id}">${eateryObj.businessName}</option>`
-//     }
-//     eateryHTMLelement += ` </select>`
-//     eathtmlPosition.innerHTML = `${eateryHTMLelement}`
-// }

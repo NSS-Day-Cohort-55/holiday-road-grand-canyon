@@ -12,7 +12,7 @@
 }
 
 .openbtn:hover {
-  background-color: #c9e1f9;
+  background-color: #395070;
 }
 
 /* ASIDE AREA */
@@ -68,14 +68,22 @@ footer {
   background-color: #d1e0f4;
 }
 
-footer,
-.openbtn,
-.savedTrips,
 #eatDetailButton,
 #bizarre_button,
 #park_detailsButton {
-  background-color: #90c2f4;
+  background-color: white !important;
+  border-width: 1px !important;
 }
 .openbtn {
   color: #111 !important;
+}
+
+footer {
+  background-color: #0b152b !important;
+  color: white;
+}
+
+.openbtn,
+.savedTrips {
+  background-color: #d1e0f4;
 }
