@@ -1,5 +1,7 @@
 footer {
-    display: flex;
-    justify-content: space-around;
-    align-items: flex-start;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 25%;
+  margin-left: -5%;
 }
