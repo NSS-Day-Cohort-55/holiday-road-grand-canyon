@@ -1,58 +1,50 @@
 /* This is the file for changing around the color palette */
 
-
 /* This is the entire background of the webpage */
 .holiday {
-
+  background-color: #f9f8f4 !important;
 }
 
 /* HEADER AREA */
 
 .savedTrips {
-    background-color: #111; /* Black*/ 
-}
-
-.openbtn {
-    background-color: #111;
-    color: white;
+  background-color: #111; /* Black*/
 }
 
 .openbtn:hover {
-    background-color: #444;
+  background-color: #cb9b75;
 }
 
 /* ASIDE AREA */
 .savedTripCard {
-    color: #818181;
+  color: #818181;
 }
 
 /* MIDDLE AREA */
 
 /* These are the banners for "National Parks" "Eateries" "Bizarre Places" */
 .middle_threeCardArea h2 {
-    background-color: #808080;
+  color: #111;
+  font-weight: bold;
 }
 
 .middle_card {
-    background-color: lightgreen;
-    
+  background-color: lightgreen;
 }
 
 /* MIDDLE_WEATHER */
 .weather_title {
-    background-color: gray;
+  background-color: gray;
 }
 
 .weather_card {
-    background-color: gray;
+  background-color: gray;
 }
 
 /* FOOTER */
 footer {
-    background-color:gray;
-    
+  background-color: gray;
 }
-
 
 /* Configuration A */
 /* header banner, parks banner and weather all the same color */
@@ -62,35 +54,56 @@ footer {
 #eatery,
 #bizarre,
 #parkDropdown {
-    background-color: antiquewhite;
-
+  background-color: #f9f8f4;
 }
 
-.welcome_aside,
+.welcome_aside {
+  background-color: #51493d;
+}
+
 .middle_threeCardArea h2,
 .weather_title,
-.closebtn{
-    background-color: goldenrod;
+.closebtn {
+  background-color: #996439;
 }
 
 .middle_card,
 .weather_card {
-    background-color: tan;
-    
+  background-color: #a09a90;
 }
 
-footer,
-.openbtn,
-.savedTrips,
 #eatDetailButton,
 #bizarre_button,
-#park_detailsButton
- {
-    background-color:brown;
-    
+#park_detailsButton {
+  background-color: #f9f8f4;
+  border-width: 1px !important;
 }
 .openbtn {
-    color: white;
+  color: #f9f8f4 !important;
 }
 
+footer {
+  background-color: #51493d !important;
+  color: #f9f8f4;
+}
 
+.openbtn {
+  background-color: #996439;
+}
+.savedTrips {
+  background-color: #a09a90;
+}
+
+#eatDetailButton:hover,
+#bizarre_button:hover,
+#park_detailsButton:hover {
+  background-color: #996439 !important;
+  border-width: 1px !important;
+}
+#saveTrip:hover:enabled {
+  background-color: #cb9b75 !important;
+}
+
+#closebtn:hover {
+  background-color: #cb9b75;
+}

@@ -186,6 +186,7 @@ applicationElement.addEventListener("click", (event) => {
     //----------------------------------------- change here
     document.getElementById("main_aside").style.marginRight = "250px";
     document.getElementById("closebtn").style.visibility = "visible";
+    document.getElementById("footer").style.marginRight = "250px";
   }
 });
 
@@ -196,6 +197,7 @@ applicationElement.addEventListener("click", (event) => {
     document.getElementById("main_aside").style.marginLeft = "0";
     document.getElementById("main_aside").style.marginRight = "0";
     document.getElementById("closebtn").style.visibility = "hidden";
+    document.getElementById("footer").style.marginRight = "0";
   }
 });
 

@@ -16,18 +16,12 @@
 
 .middle_save {
   position: fixed;
-  bottom: 0;
-  right: 50%;
+  top: 50%;
+  left: 50%;
+  margin-top: 390px; /* 5.2 * height */
+  margin-left: -100px; /* Negative half of width. */
 }
 
-/* .closebtn {
-    font-size: 20px;
-cursor: pointer;
-background-color: #111;
-color: white;
-padding: 10px 15px;
-border: none;
+.middle_title {
+  color: #51493d;
 }
-.closebtn:hover {
-    background-color: #444;
-    } */
