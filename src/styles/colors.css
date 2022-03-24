@@ -71,7 +71,7 @@ footer {
 #eatDetailButton,
 #bizarre_button,
 #park_detailsButton {
-  background-color: white !important;
+  background-color: white;
   border-width: 1px !important;
 }
 .openbtn {
@@ -86,4 +86,11 @@ footer {
 .openbtn,
 .savedTrips {
   background-color: #d1e0f4;
+}
+
+#eatDetailButton:hover,
+#bizarre_button:hover,
+#park_detailsButton:hover {
+  background-color: #62a2e1 !important;
+  border-width: 1px !important;
 }

@@ -4,6 +4,8 @@
 
 .amenityIcon {
   width: 50px;
+  margin-top: 10px;
+  margin-right: 10px;
 }
 
 .parkPic {
@@ -52,9 +54,4 @@ select {
 .middle_threeCardArea button {
   font-size: 16px;
   margin: 1px 0px;
-}
-
-.eateryCard img {
-  display: flex;
-  justify-content: space-between;
 }
