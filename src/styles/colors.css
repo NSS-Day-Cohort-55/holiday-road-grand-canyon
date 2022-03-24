@@ -2,7 +2,7 @@
 
 /* This is the entire background of the webpage */
 .holiday {
-  background-color: #0b152b !important;
+  background-color: #f9f8f4 !important;
 }
 
 /* HEADER AREA */
@@ -12,7 +12,7 @@
 }
 
 .openbtn:hover {
-  background-color: #395070;
+  background-color: #cb9b75;
 }
 
 /* ASIDE AREA */
@@ -24,7 +24,8 @@
 
 /* These are the banners for "National Parks" "Eateries" "Bizarre Places" */
 .middle_threeCardArea h2 {
-  background-color: #808080;
+  color: #111;
+  font-weight: bold;
 }
 
 .middle_card {
@@ -53,50 +54,56 @@ footer {
 #eatery,
 #bizarre,
 #parkDropdown {
-  background-color: white;
+  background-color: #f9f8f4;
 }
 
-.welcome_aside,
+.welcome_aside {
+  background-color: #51493d;
+}
+
 .middle_threeCardArea h2,
 .weather_title,
 .closebtn {
-  background-color: #62a2e1;
+  background-color: #996439;
 }
 
 .middle_card,
 .weather_card {
-  background-color: #d1e0f4;
+  background-color: #a09a90;
 }
 
 #eatDetailButton,
 #bizarre_button,
 #park_detailsButton {
-  background-color: white;
+  background-color: #f9f8f4;
   border-width: 1px !important;
 }
 .openbtn {
-  color: #111 !important;
+  color: #f9f8f4 !important;
 }
 
 footer {
-  background-color: #0b152b !important;
-  color: white;
+  background-color: #51493d !important;
+  color: #f9f8f4;
 }
 
-.openbtn,
+.openbtn {
+  background-color: #996439;
+}
 .savedTrips {
-  background-color: #d1e0f4;
+  background-color: #a09a90;
 }
 
 #eatDetailButton:hover,
 #bizarre_button:hover,
-#park_detailsButton:hover,
-#saveTrip:hover:enabled {
-  background-color: #62a2e1 !important;
+#park_detailsButton:hover {
+  background-color: #996439 !important;
   border-width: 1px !important;
+}
+#saveTrip:hover:enabled {
+  background-color: #cb9b75 !important;
 }
 
 #closebtn:hover {
-  background-color: #0b152b;
-  color: red;
+  background-color: #cb9b75;
 }

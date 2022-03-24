@@ -5,6 +5,7 @@
   font-size: 32px;
   margin-bottom: 1rem;
   padding-top: 1rem;
+  color: #f9f8f4;
 }
 
 .header_startingPointMessage {
@@ -13,7 +14,7 @@
   font-style: italic;
   font-size: 24px;
   padding-left: 1rem;
-  color: white;
+  color: #f9f8f4;
 }
 .header_startingPoint {
   margin-left: 70%;

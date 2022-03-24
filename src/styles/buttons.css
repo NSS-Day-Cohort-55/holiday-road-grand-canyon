@@ -8,6 +8,7 @@ button {
   align-self: center;
   font-weight: bold;
   font-size: 24px;
+  background-color: #f9f8f4;
 }
 
 #saveTrip:disabled {
