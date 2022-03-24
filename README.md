@@ -2,7 +2,7 @@
 * The goal of this project was to build a web application that allows a user to create a travel plan that consists of a National Park, a bizzarary, and an eatery.
 * When the user selects a state, we call on the National Parks Services API to populate a dropdown of parks, and when they select a park we use the Open Weather API to generate a 5 day weather forecast so the user can see what the weather is going to be like in the near-future at the park they choose. We also use some open APIs to populate the dropdowns for bizzararies and eateries and provide details for all three selections when prompted. Once a user has selected all three options, they can save their trip to a local database using JSON-Server, and view their saved trips in the aside bar.
 * ### Tech Stack
-  * <nobr><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg'><img width ='32px' src ='https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg'><img width = '32px' src="./readme-imgs/json-icon"></nobr> 
+  * <nobr><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original-wordmark.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/css3/css3-original-wordmark.svg'><img width ='32px' src ='https://raw.githubusercontent.com/devicons/devicon/master/icons/canva/canva-original.svg'><img width ='32px' src ='https://github.com/devicons/devicon/blob/master/icons/figma/figma-original.svg'><img width = '32px' src="./readme-imgs/json-icon.png"></nobr> 
   
 
 
@@ -19,6 +19,13 @@
 ![Aside](./readme-imgs/finished-product-aside.png)
 ![Bottom Half](./readme-imgs/finsihed-product-2.png)
 
+
+## Instructions For Viewing
+1. Navigate to the directory in which you want Holiday Road to reside
+1. run `git clone git@github.com:JavontaeH/hello-world-my-2-cents.git`
+1. run `cd hello-world-my-2-cents`
+1. run `serve` (npm package downloaded here https://www.npmjs.com/package/serve) to create a local server to view the website on
+1. copy % paste local port from serve command into browser 
 
 
 
