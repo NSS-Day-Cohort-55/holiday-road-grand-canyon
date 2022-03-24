@@ -41,7 +41,7 @@ export const renderEateryHTML = (event) => {
     `;
     description += checkEatAmeneties(thisEatery);
     document.getElementById("eatery_card_details").innerHTML = description;
-    document.getElementById("bizzare_deets").style.visibility = "hidden";
+    document.getElementById("eatery_card_details").style.visibility = "hidden";
   });
 };
 

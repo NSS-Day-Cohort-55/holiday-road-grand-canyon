@@ -29,8 +29,16 @@
   width: 125%;
   padding: 1em 0.25em;
   margin-left: -1em;
-  margin-right: -2em;
+  /* margin-right: -2em; */
 }
+
+#biz_place {
+  overflow-x: hidden;
+}
+
+/* .bizzareCard h2 {
+  overflow: hidden !important;
+} */
 
 .middle_threeCardArea h3 {
   margin: -0.01em 0em;

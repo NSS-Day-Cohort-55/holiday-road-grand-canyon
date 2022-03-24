@@ -1,17 +1,25 @@
 .holiday {
-    /* font-family: "Cairo", sans-serif;
+  /* font-family: "Cairo", sans-serif;
     font-family: "Exo", sans-serif;
     font-family: "Titillium Web", sans-serif; */
-  }
+  overflow-x: hidden !important;
+}
 
-  h1, h2, div {
-    font-family: "Cairo", sans-serif;
-  }
+h1,
+h2,
+div {
+  font-family: "Cairo", sans-serif;
+}
 
-  h3, h4 {
-    font-family: "Exo", sans-serif;
-  }
+h3,
+h4 {
+  font-family: "Exo", sans-serif;
+}
 
-  h5, h6, p, button, select {
-    font-family: "Titillium Web", sans-serif;
-  }
+h5,
+h6,
+p,
+button,
+select {
+  font-family: "Titillium Web", sans-serif;
+}
